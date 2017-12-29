@@ -1,0 +1,30 @@
+<html>
+<head>
+
+</head>
+<body>
+    <p>矩阵乘法的本质为：线性变换(Line Transform)。</p>
+    <h1>Principle</h1>
+
+    <h2>Dimension Equal Transform</h2>
+    <p>假设：向量x=[1,2], 矩阵A=[[3,1],[1,2]]，C=Ax=[5,5]。则：</p>
+    <h3>Geometry Expression</h3>
+    <ul>
+        <li>[1,2]表示向量x在当前(默认)坐标系下的量化投影(数值)</li>
+        <li>矩阵A表示一个新的空间，其数值[[3,1],[1,2]]表示该空间的基在当前(默认)坐标系下的量化投影(数值)
+            <ul>
+                <li>a1=[3,1]和a2=[1,2]表示新空间的一个基(坐标轴)，其长度为新坐标的单位长度</li>
+            </ul>
+        </li>
+        <li>B=Ax表示把向量x投影到A空间，其数值[5,5]表示新坐标系下的坐标值</li>
+    </ul>
+    <embed src="svg/Dimension_Equal_Transform.svg"/>
+
+    <h2>Dimension Increase Transform</h2>
+    <p>假设：向量x=[1,2], 矩阵A=[[3,1],[1,2],[1,1]]，C=Ax=[5,5,3]。则：</p>
+    <embed src="svg/Dimension_Increase_Transform.svg"/>
+
+    <h2>Dimension Reduction Transform</h2>
+    <p>假设：向量x=[1,2], 矩阵A=[3,1]，C=Ax=5。则：</p>
+</body>
+</html>
