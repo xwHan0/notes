@@ -1,0 +1,59 @@
+<html>
+<head>
+
+</head>
+<body>
+    <center><b>Index</b></center>
+    <ul>
+        <li><a href="#vector">Vector</a>
+        <ul>
+            <li><a href="#vector_geometry">Geometry View</a></li>
+            <li><a href="#vector_property">Property</a></li>
+        </ul>
+        </li>
+        <li><a href="#matrix">Matrix</a>
+            <ul>
+                <li><a href="#matrix_geometry">Geometry View</a></li>
+            </ul>
+        </li>
+    </ul>
+
+    <h1><a name="vector">Vector</a></h1>
+    <p>向量是由有限个元素组成的有序集合,表示为:a=[a1,a2,...,aN]。其中a为向量，a1,a2,aN为向量a的元素。
+        元素在向量中的位置称为下标。</p>
+    <h2><a name="vector_geometry">Geometry View</a></h2>
+    <p>N维向量a=[a1,a2,...,aN]表示在N为线性空间中，过坐标原点和点(a1,a2,...,aN)的有向线段。</p>
+    <p>例如：</p>
+    <p>向量a=[3,1]可表示以下几何意义</p>
+    <embed src="svg/vector_geo_2.svg"/>
+    <p>向量a=[3]可表示以下几何意义</p>
+    <embed src="svg/vector_geo_1.svg"/>
+    <h2><a name="vector_property">Basic Operator</a></h2>
+    <h3>Dimension</h3>
+    <h3>Size</h3>
+    <h3>get</h3>
+    <h3>set</h3>
+
+
+    <h1><a name="matrix">Matrix</a></h1>
+    <h2><a name="matrix_geometry">Geometry View</a></h2>
+    <p>把M*N的矩阵A按列分解为多个向量的集合: A=[c1,c2,...,cN],则矩阵A可以表示以下2种几何含义：</p>
+    <ul>
+        <li>N维平行多面体：表示由向量c1,c2,...,cN作为边的平行多面体</li>
+        <li>N维空间基：表示由向量c1,c2,...,cN作为单位基而张成的N为空间坐标</li>
+    </ul>
+    <p>例如：</p>
+    <p>矩阵A=[[3,1],[2,1]]可表示以下几何意义</p>
+    <embed src="svg/matrix_geo_2x2.svg"/>
+    <p>矩阵A=[[3,1],[1,2],[1,1]]表示以下几何意义</p>
+    <embed src="svg/matrix_geo_3x2.svg"/>
+    <p>矩阵A=[[3,1,1],[1,2,1]]表示以下几何意义</p>
+    <embed src="svg/matrix_geo_2x3.svg"/>
+    <p>矩阵A=[[3,1,1]]表示以下几何意义</p>
+    <embed src="svg/matrix_geo_3x1.svg"/>
+    <p>对于矩阵A=[[3]]，因为只有一个维度，所以只能表示一维坐标轴的一个有向线段。</p>
+    <embed src="svg/matrix_geo_1x1.svg"/>
+    <p>矩阵也可以按行分解:A=trans([r1,r2,...,rM])，得出与按列分解类似的结论。</p>
+
+</body>
+</html>
