@@ -1,0 +1,103 @@
+﻿module #(
+  REQ_NUM = 4,
+  REQ_BIT = 'log2(REQ_NUM)
+)BDPA_CEll(
+  input msk,
+  input [REQ_BIT-1:0] ptr,
+  input [REQ_NUM-1:0] req,
+  input [REQ_NUM-1:0] imsk,
+  output wire [REQ_NUM-1:0] gnt,
+    output wire [REQ_NUM-1:0] omsk
+);
+
+wire [REQ_NUM-1:0] i_gnt;
+
+RR rr #(REQ_NUM)
+(
+  .req    (~imsk & req),
+  .ptr   (ptr),
+  .gnt  (i_gnt)
+);
+
+assign gnt = i_gnt & {REQ_NUM{msk}};
+assign omsk = ( i_gnt | i_msk ) & {REQ_NUM{msk}};
+
+endmodule
+
+module 
+#(
+    C = 4,
+    R = 4,
+    CBIT = 'log2(C),
+    RBIT = 'log2(R)
+)
+BDPA_CORE
+(
+    input clk,
+    input rstn,
+    input [C*R-1:0] req,
+    input [CBIT-1:0] cptr,
+    input [C*RBIT-1:0] rptrs,
+    output reg [C*R-1:0] gnt
+);
+
+parameter C21 = 2*C - 1;
+
+genvar gi;
+interge i;
+
+reg [C21-1:0] cmsk;
+reg [R-1:0] i_req[C21-1:0];
+wire [R-1:0] i_gnt[C21-1:0];
+reg [RBIT-1:0] i_rptrs[C21-1:0];
+reg [R-1:0] i_imsk[C21-1:0];
+wire [R-1:0] i_omsk[C21-1:0];
+
+always@(*)begin
+    for( i = 0; i < C21; i = i + 1 ) begin
+        i_req[i] = req[(i%C)*R+:R];
+        i_rptrs[i] = rptrs[(i%C)*R+:R];
+    end
+end
+
+generate
+for( gi = 0; gi < C21; gi = gi + 1) begin: CMSK_
+    if( gi < cptr )
+        cmsk[gi] = 1'b0;
+    else if( gi < cptr + C )
+        cmsk[gi] = 1'b1;
+    else
+        cmsk[gi] = 1'b0;
+    
+    if( gi == 0 )
+        i_msk[gi] = {R{1'b0}};
+    else
+        i_msk[gi] = i_omsk[gi - 1];
+end
+endgenerate
+
+generate
+for( gi = 0; gi < C21; gi = gi + 1 ) begin: C_
+    BDPA_CELL cel
+    #(R)
+    (
+        .msk    ( cmsk[gi] ),
+        .ptr  ( i_rptrs[gi] ),
+        .req  ( i_req[gi] ),
+        .imsk  ( i_imsk[gi] ),
+        .gnt  ( i_gnt[gi] ),
+    .omsk  ( i_omsk[gi] )
+    );
+end
+endgenerate
+
+always@(*) begin
+    for( i = 0; i < C; i = i + 1 )
+        if( i == C - 1 )
+            gnt[i*R+:R] = i_gnt[i];
+        else
+            gnt[i*R+:R] = i_gnt[i] | i_gnt[i+C];
+end
+
+endmodule
+

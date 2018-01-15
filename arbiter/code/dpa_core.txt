@@ -1,0 +1,56 @@
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿
+module DPA_CORE
+#(
+  parameter  M      = 7,
+  parameter  K       = 4
+)
+(
+  input  wire [M*K-1:0]     r,
+  input  wire [K-1:0]         ns,
+  input  wire [M-1:0]         ws,
+  output wire [M*K-1:0]                g 
+);
+
+genvar i, j;
+
+wire [K-1:0]		n[M-1:0];
+wire [K-1:0]		s[M-1:0];
+wire [K-1:0]		e[M-1:0];
+wire [K-1:0]		w[M-1:0];
+
+generate
+
+  for( i=0; i<M; i=i+1 ) begin: N_R
+    for( j=0; j<K; j=j+1 ) begin: N_C
+      assign n[i][j] = (i==0) ? ns[j] : s[i-1][j];
+    end
+  end
+
+  for( i=0; i<M; i=i+1 ) begin: W_R
+    for( j=0; j<K; j=j+1 ) begin: W_C
+      assign w[i][j] = (j==0) ? ws[i] : e[i][j-1];
+    end
+  end
+
+  for( i=0; i<M; i=i+1 ) begin: E_R
+    for( j=0; j<K; j=j+1 ) begin: E_C
+      assign e[i][j] = w[i][j] | r[i*K+j];
+    end
+  end
+
+  for( i=0; i<M; i=i+1 ) begin: S_R
+    for( j=0; j<K; j=j+1 ) begin: S_C
+      assign s[i][j] = n[i][j] | r[i*K+j];
+    end
+  end
+
+  for( i=0; i<M; i=i+1 ) begin: G_R
+    for( j=0; j<K; j=j+1 ) begin: G_C
+      assign g[i*K+j] = r[i*K+j] & ~n[i][j] & ~w[i][j];
+    end
+  end
+
+
+endgenerate
+
+endmodule

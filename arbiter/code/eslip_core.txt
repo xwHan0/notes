@@ -1,0 +1,59 @@
+module ESLIP_CORE
+#(
+  parameter  I      = 7,
+  parameter  O      = 4,
+  parameter  C      = 1
+)
+(
+  input  wire               clk,
+  input  wire               rstn,
+  input  wire [I*O*C-1:0]   r,
+  output wire [I*O*C-1:0]   g 
+);
+
+parameter	ISEL_REQ_BIT	= O*C;
+
+genvar i, j;
+
+wire  [I*O*C-1:0]    o2i;
+
+generate
+
+  for( i=0; i<I; i=i+1 ) begin: O_SEL 
+    ESLIP_OSEL U_OSEL
+    (
+			.clk				(clk),
+			.rstn				(rstn),
+			.r					(r[i*ISEL_REQ_BIT +: ISEL_REQ_BIT]),
+			.g					(o2i[i*ISEL_REQ_BIT +: ISEL_REQ_BIT])
+    );
+  end
+
+  for( i=0; i<M; i=i+1 ) begin: W_R
+    for( j=0; j<K; j=j+1 ) begin: W_C
+      assign w[i][j] = (j==0) ? ws[i] : e[i][j-1];
+    end
+  end
+
+  for( i=0; i<M; i=i+1 ) begin: E_R
+    for( j=0; j<K; j=j+1 ) begin: E_C
+      assign e[i][j] = w[i][j] | r[i*K+j];
+    end
+  end
+
+  for( i=0; i<M; i=i+1 ) begin: S_R
+    for( j=0; j<K; j=j+1 ) begin: S_C
+      assign s[i][j] = n[i][j] | r[i*K+j];
+    end
+  end
+
+  for( i=0; i<M; i=i+1 ) begin: G_R
+    for( j=0; j<K; j=j+1 ) begin: G_C
+      assign g[i*K+j] = r[i*K+j] & ~n[i][j] & ~w[i][j];
+    end
+  end
+
+
+endgenerate
+
+endmodule
