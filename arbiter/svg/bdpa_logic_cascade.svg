@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 15.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="1196.5px" height="539px" viewBox="0 0 1196.5 539" enable-background="new 0 0 1196.5 539" xml:space="preserve">
+<g>
+	<rect x="387" y="95.736" fill="#FFFFFF" stroke="#000000" stroke-miterlimit="10" width="133" height="326.945"/>
+	<text transform="matrix(1 0 0 1 411.9998 272.2363)" font-family="'ArialMT'" font-size="14">BDPA_CELL</text>
+	<g>
+		<g>
+			<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="284" y1="177.736" x2="379.939" y2="177.736"/>
+			<g>
+				<polygon points="387,177.736 377.051,181.802 379.41,177.736 377.051,173.672 				"/>
+			</g>
+		</g>
+	</g>
+	<g>
+		<g>
+			<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="284" y1="232.736" x2="379.939" y2="232.736"/>
+			<g>
+				<polygon points="387,232.736 377.051,236.802 379.41,232.736 377.051,228.672 				"/>
+			</g>
+		</g>
+	</g>
+	<g>
+		<g>
+			<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="284" y1="352.736" x2="379.939" y2="352.736"/>
+			<g>
+				<polygon points="387,352.736 377.051,356.802 379.41,352.736 377.051,348.672 				"/>
+			</g>
+		</g>
+	</g>
+	<g>
+		<g>
+			<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="346" y1="161.736" x2="379.939" y2="161.736"/>
+			<g>
+				<polygon points="387,161.736 377.051,165.802 379.41,161.736 377.051,157.672 				"/>
+			</g>
+		</g>
+	</g>
+	<g>
+		<g>
+			<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="346" y1="216.736" x2="379.939" y2="216.736"/>
+			<g>
+				<polygon points="387,216.736 377.051,220.802 379.41,216.736 377.051,212.672 				"/>
+			</g>
+		</g>
+	</g>
+	<g>
+		<g>
+			<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="346" y1="336.736" x2="379.939" y2="336.736"/>
+			<g>
+				<polygon points="387,336.736 377.051,340.802 379.41,336.736 377.051,332.672 				"/>
+			</g>
+		</g>
+	</g>
+	<text transform="matrix(1 0 0 1 390.9998 180.7363)" font-family="'ArialMT'" font-size="14">msk#1</text>
+	<text transform="matrix(1 0 0 1 389.9998 234.2363)" font-family="'ArialMT'" font-size="14">msk#2</text>
+	<text transform="matrix(1 0 0 1 478.9998 180.4863)" font-family="'ArialMT'" font-size="14">gnt#1</text>
+	<text transform="matrix(1 0 0 1 477.9998 233.9863)" font-family="'ArialMT'" font-size="14">gnt#2</text>
+	<text transform="matrix(1 0 0 1 477.9998 355.9863)" font-family="'ArialMT'" font-size="14">gnt#M</text>
+	<text transform="matrix(1 0 0 1 389.9998 356.2363)" font-family="'ArialMT'" font-size="14">msk#M</text>
+	<text transform="matrix(1 0 0 1 391.4998 163.7363)" font-family="'ArialMT'" font-size="14">req#1</text>
+	<text transform="matrix(1 0 0 1 435.4998 109.7363)" font-family="'ArialMT'" font-size="14">mask</text>
+	<text transform="matrix(1 0 0 1 447.4998 414.7363)" font-family="'ArialMT'" font-size="14">ptr</text>
+	<text transform="matrix(1 0 0 1 390.4998 217.2363)" font-family="'ArialMT'" font-size="14">req#2</text>
+	<text transform="matrix(1 0 0 1 390.4998 337.2363)" font-family="'ArialMT'" font-size="14">req#M</text>
+	<g>
+		<g>
+			<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="447.5" y1="55.736" x2="447.5" y2="88.676"/>
+			<g>
+				<polygon points="447.5,95.736 443.435,85.787 447.5,88.148 451.564,85.787 				"/>
+			</g>
+		</g>
+	</g>
+	<g>
+		<g>
+			<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="453.5" y1="457.736" x2="453.5" y2="429.742"/>
+			<g>
+				<polygon points="453.5,422.682 457.565,432.631 453.5,430.27 449.436,432.631 				"/>
+			</g>
+		</g>
+	</g>
+	<text transform="matrix(1 0 0 1 310.4998 47.6816)" font-family="'ArialMT'" font-size="14">req[2][1..M]</text>
+	<line fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" x1="346" y1="336.209" x2="346" y2="55.209"/>
+</g>
+<g>
+	<rect x="623" y="95.209" fill="#FFFFFF" stroke="#000000" stroke-miterlimit="10" width="133" height="326.945"/>
+	<text transform="matrix(1 0 0 1 648.0002 271.709)" font-family="'ArialMT'" font-size="14">BDPA_CELL</text>
+	<g>
+		<g>
+			<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="520" y1="177.209" x2="615.939" y2="177.209"/>
+			<g>
+				<polygon points="623,177.209 613.051,181.274 615.41,177.209 613.051,173.145 				"/>
+			</g>
+		</g>
+	</g>
+	<g>
+		<g>
+			<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="520" y1="232.209" x2="615.939" y2="232.209"/>
+			<g>
+				<polygon points="623,232.209 613.051,236.274 615.41,232.209 613.051,228.145 				"/>
+			</g>
+		</g>
+	</g>
+	<g>
+		<g>
+			<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="520" y1="352.209" x2="615.939" y2="352.209"/>
+			<g>
+				<polygon points="623,352.209 613.051,356.273 615.41,352.209 613.051,348.145 				"/>
+			</g>
+		</g>
+	</g>
+	<g>
+		<g>
+			<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="582" y1="161.209" x2="615.939" y2="161.209"/>
+			<g>
+				<polygon points="623,161.209 613.051,165.274 615.41,161.209 613.051,157.145 				"/>
+			</g>
+		</g>
+	</g>
+	<g>
+		<g>
+			<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="582" y1="216.209" x2="615.939" y2="216.209"/>
+			<g>
+				<polygon points="623,216.209 613.051,220.274 615.41,216.209 613.051,212.145 				"/>
+			</g>
+		</g>
+	</g>
+	<g>
+		<g>
+			<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="582" y1="336.209" x2="615.939" y2="336.209"/>
+			<g>
+				<polygon points="623,336.209 613.051,340.273 615.41,336.209 613.051,332.145 				"/>
+			</g>
+		</g>
+	</g>
+	<text transform="matrix(1 0 0 1 627.0002 180.209)" font-family="'ArialMT'" font-size="14">msk#1</text>
+	<text transform="matrix(1 0 0 1 626.0002 233.709)" font-family="'ArialMT'" font-size="14">msk#2</text>
+	<text transform="matrix(1 0 0 1 715.0002 179.959)" font-family="'ArialMT'" font-size="14">gnt#1</text>
+	<text transform="matrix(1 0 0 1 714.0002 233.459)" font-family="'ArialMT'" font-size="14">gnt#2</text>
+	<text transform="matrix(1 0 0 1 714.0002 355.459)" font-family="'ArialMT'" font-size="14">gnt#M</text>
+	<text transform="matrix(1 0 0 1 626.0002 355.709)" font-family="'ArialMT'" font-size="14">msk#M</text>
+	<text transform="matrix(1 0 0 1 627.5002 163.209)" font-family="'ArialMT'" font-size="14">req#1</text>
+	<text transform="matrix(1 0 0 1 671.5002 109.209)" font-family="'ArialMT'" font-size="14">mask</text>
+	<text transform="matrix(1 0 0 1 683.5002 414.209)" font-family="'ArialMT'" font-size="14">ptr</text>
+	<text transform="matrix(1 0 0 1 626.5002 216.709)" font-family="'ArialMT'" font-size="14">req#2</text>
+	<text transform="matrix(1 0 0 1 626.5002 336.709)" font-family="'ArialMT'" font-size="14">req#M</text>
+	<g>
+		<g>
+			<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="683.5" y1="55.209" x2="683.5" y2="88.148"/>
+			<g>
+				<polygon points="683.5,95.209 679.435,85.26 683.5,87.621 687.564,85.26 				"/>
+			</g>
+		</g>
+	</g>
+	<g>
+		<g>
+			<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="689.5" y1="457.209" x2="689.5" y2="429.215"/>
+			<g>
+				<polygon points="689.5,422.154 693.565,432.104 689.5,429.742 685.436,432.104 				"/>
+			</g>
+		</g>
+	</g>
+	<text transform="matrix(1 0 0 1 546.4998 48.1543)" font-family="'ArialMT'" font-size="14">req[3][1..M]</text>
+	<line fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" x1="582" y1="336.682" x2="582" y2="55.682"/>
+</g>
+<g>
+	<rect x="952" y="92.682" fill="#FFFFFF" stroke="#000000" stroke-miterlimit="10" width="133" height="326.945"/>
+	<text transform="matrix(1 0 0 1 977.0002 269.1816)" font-family="'ArialMT'" font-size="14">BDPA_CELL</text>
+	<g>
+		<g>
+			<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="849" y1="174.682" x2="944.939" y2="174.682"/>
+			<g>
+				<polygon points="952,174.682 942.051,178.747 944.41,174.682 942.051,170.617 				"/>
+			</g>
+		</g>
+	</g>
+	<g>
+		<g>
+			<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="849" y1="229.682" x2="944.939" y2="229.682"/>
+			<g>
+				<polygon points="952,229.682 942.051,233.747 944.41,229.682 942.051,225.617 				"/>
+			</g>
+		</g>
+	</g>
+	<g>
+		<g>
+			<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="849" y1="349.682" x2="944.939" y2="349.682"/>
+			<g>
+				<polygon points="952,349.682 942.051,353.747 944.41,349.682 942.051,345.617 				"/>
+			</g>
+		</g>
+	</g>
+	<g>
+		<g>
+			<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="911" y1="158.682" x2="944.939" y2="158.682"/>
+			<g>
+				<polygon points="952,158.682 942.051,162.747 944.41,158.682 942.051,154.617 				"/>
+			</g>
+		</g>
+	</g>
+	<g>
+		<g>
+			<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="911" y1="213.682" x2="944.939" y2="213.682"/>
+			<g>
+				<polygon points="952,213.682 942.051,217.747 944.41,213.682 942.051,209.617 				"/>
+			</g>
+		</g>
+	</g>
+	<g>
+		<g>
+			<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="911" y1="333.682" x2="944.939" y2="333.682"/>
+			<g>
+				<polygon points="952,333.682 942.051,337.747 944.41,333.682 942.051,329.617 				"/>
+			</g>
+		</g>
+	</g>
+	<text transform="matrix(1 0 0 1 956.0002 177.6816)" font-family="'ArialMT'" font-size="14">msk#1</text>
+	<text transform="matrix(1 0 0 1 955.0002 231.1816)" font-family="'ArialMT'" font-size="14">msk#2</text>
+	<text transform="matrix(1 0 0 1 1044.0002 177.4316)" font-family="'ArialMT'" font-size="14">gnt#1</text>
+	<text transform="matrix(1 0 0 1 1043.0002 230.9316)" font-family="'ArialMT'" font-size="14">gnt#2</text>
+	<text transform="matrix(1 0 0 1 1043.0002 352.9316)" font-family="'ArialMT'" font-size="14">gnt#M</text>
+	<text transform="matrix(1 0 0 1 955.0002 353.1816)" font-family="'ArialMT'" font-size="14">msk#M</text>
+	<text transform="matrix(1 0 0 1 956.5002 160.6816)" font-family="'ArialMT'" font-size="14">req#1</text>
+	<text transform="matrix(1 0 0 1 1000.5002 106.6816)" font-family="'ArialMT'" font-size="14">mask</text>
+	<text transform="matrix(1 0 0 1 1012.5002 411.6816)" font-family="'ArialMT'" font-size="14">ptr</text>
+	<text transform="matrix(1 0 0 1 955.5002 214.1816)" font-family="'ArialMT'" font-size="14">req#2</text>
+	<text transform="matrix(1 0 0 1 955.5002 334.1816)" font-family="'ArialMT'" font-size="14">req#M</text>
+	<g>
+		<g>
+			<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="1012.5" y1="52.682" x2="1012.5" y2="85.621"/>
+			<g>
+				<polygon points="1012.5,92.682 1008.435,82.732 1012.5,85.093 1016.564,82.732 				"/>
+			</g>
+		</g>
+	</g>
+	<g>
+		<g>
+			<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="1018.5" y1="454.682" x2="1018.5" y2="426.688"/>
+			<g>
+				<polygon points="1018.5,419.627 1022.565,429.576 1018.5,427.215 1014.436,429.576 				"/>
+			</g>
+		</g>
+	</g>
+	<text transform="matrix(1 0 0 1 875.5002 45.1543)" font-family="'ArialMT'" font-size="14">req[N][1..M]</text>
+	<line fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" x1="911" y1="333.682" x2="911" y2="52.682"/>
+</g>
+<g>
+	<rect x="151" y="97.209" fill="#FFFFFF" stroke="#000000" stroke-miterlimit="10" width="133" height="326.945"/>
+	<text transform="matrix(1 0 0 1 175.9998 273.709)" font-family="'ArialMT'" font-size="14">BDPA_CELL</text>
+	<g>
+		<g>
+			<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="48" y1="179.209" x2="143.939" y2="179.209"/>
+			<g>
+				<polygon points="151,179.209 141.051,183.274 143.412,179.209 141.051,175.145 				"/>
+			</g>
+		</g>
+	</g>
+	<g>
+		<g>
+			<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="48" y1="234.209" x2="143.939" y2="234.209"/>
+			<g>
+				<polygon points="151,234.209 141.051,238.274 143.412,234.209 141.051,230.145 				"/>
+			</g>
+		</g>
+	</g>
+	<g>
+		<g>
+			<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="48" y1="354.209" x2="143.939" y2="354.209"/>
+			<g>
+				<polygon points="151,354.209 141.051,358.273 143.412,354.209 141.051,350.145 				"/>
+			</g>
+		</g>
+	</g>
+	<g>
+		<g>
+			<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="110" y1="163.209" x2="143.939" y2="163.209"/>
+			<g>
+				<polygon points="151,163.209 141.051,167.274 143.412,163.209 141.051,159.145 				"/>
+			</g>
+		</g>
+	</g>
+	<g>
+		<g>
+			<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="110" y1="218.209" x2="143.939" y2="218.209"/>
+			<g>
+				<polygon points="151,218.209 141.051,222.274 143.412,218.209 141.051,214.145 				"/>
+			</g>
+		</g>
+	</g>
+	<g>
+		<g>
+			<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="110" y1="338.209" x2="143.939" y2="338.209"/>
+			<g>
+				<polygon points="151,338.209 141.051,342.273 143.412,338.209 141.051,334.145 				"/>
+			</g>
+		</g>
+	</g>
+	<text transform="matrix(1 0 0 1 154.9998 182.209)" font-family="'ArialMT'" font-size="14">msk#1</text>
+	<text transform="matrix(1 0 0 1 153.9998 235.709)" font-family="'ArialMT'" font-size="14">msk#2</text>
+	<text transform="matrix(1 0 0 1 242.9998 181.959)" font-family="'ArialMT'" font-size="14">gnt#1</text>
+	<text transform="matrix(1 0 0 1 241.9998 235.459)" font-family="'ArialMT'" font-size="14">gnt#2</text>
+	<text transform="matrix(1 0 0 1 241.9998 357.459)" font-family="'ArialMT'" font-size="14">gnt#M</text>
+	<text transform="matrix(1 0 0 1 153.9998 357.709)" font-family="'ArialMT'" font-size="14">msk#M</text>
+	<text transform="matrix(1 0 0 1 155.4998 165.209)" font-family="'ArialMT'" font-size="14">req#1</text>
+	<text transform="matrix(1 0 0 1 74.4998 49.6816)" font-family="'ArialMT'" font-size="14">req[1][1..M]</text>
+	<text transform="matrix(1 0 0 1 199.4998 111.209)" font-family="'ArialMT'" font-size="14">mask</text>
+	<text transform="matrix(1 0 0 1 211.4998 416.209)" font-family="'ArialMT'" font-size="14">ptr</text>
+	<text transform="matrix(1 0 0 1 154.4998 218.709)" font-family="'ArialMT'" font-size="14">req#2</text>
+	<text transform="matrix(1 0 0 1 154.4998 338.709)" font-family="'ArialMT'" font-size="14">req#M</text>
+	<g>
+		<g>
+			<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="211.5" y1="57.209" x2="211.5" y2="90.148"/>
+			<g>
+				<polygon points="211.5,97.209 207.435,87.26 211.5,89.621 215.564,87.26 				"/>
+			</g>
+		</g>
+	</g>
+	<g>
+		<g>
+			<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="217.5" y1="459.209" x2="217.5" y2="431.215"/>
+			<g>
+				<polygon points="217.5,424.154 221.565,434.104 217.5,431.742 213.436,434.104 				"/>
+			</g>
+		</g>
+	</g>
+	<line fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" x1="110" y1="338.209" x2="110" y2="57.209"/>
+</g>
+<text transform="matrix(1 0 0 1 815.0002 250)" font-family="'ArialMT'" font-size="22">...</text>
+<text transform="matrix(1 0 0 1 58.9998 174.6816)" font-family="'ArialMT'" font-size="14">0</text>
+<text transform="matrix(1 0 0 1 58.9998 228.9316)" font-family="'ArialMT'" font-size="14">0</text>
+<text transform="matrix(1 0 0 1 54.9998 347.6816)" font-family="'ArialMT'" font-size="14">0</text>
+<text transform="matrix(1 0 0 1 184.4348 47.1543)" font-family="'ArialMT'" font-size="14">rptr.bit[0]</text>
+<text transform="matrix(1 0 0 1 199.4348 474.1543)" font-family="'ArialMT'" font-size="14">cptr[0]</text>
+<text transform="matrix(1 0 0 1 434.4998 473.1543)" font-family="'ArialMT'" font-size="14">cptr[1]</text>
+<text transform="matrix(1 0 0 1 670.5002 470.0898)" font-family="'ArialMT'" font-size="14">cptr[2]</text>
+<text transform="matrix(1 0 0 1 999.5002 468.0898)" font-family="'ArialMT'" font-size="14">cptr[N]</text>
+<text transform="matrix(1 0 0 1 420.4348 48.6821)" font-family="'ArialMT'" font-size="14">rptr.bit[1]</text>
+<text transform="matrix(1 0 0 1 655.4348 47.6816)" font-family="'ArialMT'" font-size="14">rptr.bit[2]</text>
+<text transform="matrix(1 0 0 1 971.4348 45.1543)" font-family="'ArialMT'" font-size="14">rptr.bit[2*N-1]</text>
+<text transform="matrix(1 0 0 1 287.4998 471.6816)" font-family="'ArialMT'" font-size="14">gnt[1][0..M]</text>
+<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="756" y1="173.672" x2="794" y2="173.672"/>
+<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="756" y1="348.672" x2="794" y2="348.672"/>
+<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="756" y1="230.145" x2="794" y2="230.145"/>
+<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="1085" y1="173.182" x2="1123" y2="173.182"/>
+<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="1085" y1="348.182" x2="1123" y2="348.182"/>
+<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="1085" y1="229.655" x2="1123" y2="229.655"/>
+<g>
+	<g>
+		<line fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" x1="310.5" y1="196.182" x2="310.5" y2="446.5"/>
+		<g>
+			<polygon points="310.5,459.209 303.182,441.301 310.5,445.55 317.816,441.301 			"/>
+		</g>
+	</g>
+</g>
+<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="310.5" y1="196.182" x2="295.5" y2="177.737"/>
+<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="310.5" y1="252.154" x2="295.5" y2="233.709"/>
+<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="310.5" y1="371.182" x2="295.5" y2="352.736"/>
+<text transform="matrix(1 0 0 1 525.4998 471.0898)" font-family="'ArialMT'" font-size="14">gnt[2][0..M]</text>
+<g>
+	<g>
+		<line fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" x1="548.5" y1="195.59" x2="548.5" y2="445.908"/>
+		<g>
+			<polygon points="548.5,458.617 541.182,440.709 548.5,444.958 555.816,440.709 			"/>
+		</g>
+	</g>
+</g>
+<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="548.5" y1="195.59" x2="533.5" y2="177.145"/>
+<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="548.5" y1="251.562" x2="533.5" y2="233.117"/>
+<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="548.5" y1="370.589" x2="533.5" y2="352.145"/>
+<text transform="matrix(1 0 0 1 761.0002 468.0898)" font-family="'ArialMT'" font-size="14">gnt[3][0..M]</text>
+<g>
+	<g>
+		<line fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" x1="784" y1="192.59" x2="784" y2="442.908"/>
+		<g>
+			<polygon points="784,455.617 776.682,437.709 784,441.958 791.317,437.709 			"/>
+		</g>
+	</g>
+</g>
+<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="784" y1="192.59" x2="769" y2="174.145"/>
+<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="784" y1="248.562" x2="769" y2="230.117"/>
+<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="784" y1="367.589" x2="769" y2="349.145"/>
+<text transform="matrix(1 0 0 1 1054.5002 467.0898)" font-family="'ArialMT'" font-size="14">gnt[2*N-1][0..M]</text>
+<g>
+	<g>
+		<line fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" x1="1115.5" y1="191.59" x2="1115.5" y2="441.908"/>
+		<g>
+			<polygon points="1115.5,454.617 1108.182,436.709 1115.5,440.958 1122.817,436.709 			"/>
+		</g>
+	</g>
+</g>
+<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="1115.5" y1="191.59" x2="1100.5" y2="173.145"/>
+<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="1115.5" y1="247.562" x2="1100.5" y2="229.117"/>
+<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="1115.5" y1="366.589" x2="1100.5" y2="348.145"/>
+</svg>

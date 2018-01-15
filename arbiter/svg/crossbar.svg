@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 15.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="595.279px" height="500px" viewBox="0 0 595.279 500" enable-background="new 0 0 595.279 500" xml:space="preserve">
+<symbol  id="Queue" viewBox="-58 -43.5 116 87">
+	<polygon fill="#BFBFBF" stroke="#231F20" stroke-miterlimit="10" points="-57.5,43 57.5,43 57.5,-43 -57.5,-43 	"/>
+	<g>
+		<g id="fifo_18_">
+			<polygon fill="#FFFFFF" points="-40.772,-16 -19.475,-16 -19.475,-30.5 -40.772,-30.5 			"/>
+			<polygon fill="#DCDCDC" stroke="#231F20" stroke-miterlimit="10" points="-4.035,-16 3.759,-16 3.759,-30.5 -4.035,-30.5 			"/>
+			<polygon fill="#DCDCDC" stroke="#231F20" stroke-miterlimit="10" points="-11.828,-16 -4.035,-16 -4.035,-30.5 -11.828,-30.5 			
+				"/>
+			<polygon fill="#DCDCDC" stroke="#231F20" stroke-miterlimit="10" points="-19.475,-16 -11.682,-16 -11.682,-30.5 -19.475,-30.5 
+							"/>
+			<line fill="none" stroke="#231F20" stroke-miterlimit="10" x1="-19.475" y1="-30.5" x2="-40.772" y2="-30.5"/>
+			<line fill="none" stroke="#231F20" stroke-miterlimit="10" x1="-19.475" y1="-16" x2="-40.772" y2="-16"/>
+		</g>
+		<g id="fifo_17_">
+			<polygon fill="#FFFFFF" points="-44.668,-11.75 -23.369,-11.75 -23.369,-26.25 -44.668,-26.25 			"/>
+			<polygon fill="#DCDCDC" stroke="#231F20" stroke-miterlimit="10" points="-7.933,-11.75 -0.14,-11.75 -0.14,-26.25 
+				-7.933,-26.25 			"/>
+			<polygon fill="#DCDCDC" stroke="#231F20" stroke-miterlimit="10" points="-15.723,-11.75 -7.932,-11.75 -7.932,-26.25 
+				-15.723,-26.25 			"/>
+			<polygon fill="#DCDCDC" stroke="#231F20" stroke-miterlimit="10" points="-23.369,-11.75 -15.576,-11.75 -15.576,-26.25 
+				-23.369,-26.25 			"/>
+			<line fill="none" stroke="#231F20" stroke-miterlimit="10" x1="-23.369" y1="-26.25" x2="-44.668" y2="-26.25"/>
+			<line fill="none" stroke="#231F20" stroke-miterlimit="10" x1="-23.369" y1="-11.75" x2="-44.668" y2="-11.75"/>
+		</g>
+		<g id="fifo_16_">
+			<polygon fill="#FFFFFF" points="-50.26,-7.75 -28.962,-7.75 -28.962,-22.25 -50.26,-22.25 			"/>
+			<polygon fill="#DCDCDC" stroke="#231F20" stroke-miterlimit="10" points="-13.524,-7.75 -5.73,-7.75 -5.73,-22.25 
+				-13.524,-22.25 			"/>
+			<polygon fill="#DCDCDC" stroke="#231F20" stroke-miterlimit="10" points="-21.314,-7.75 -13.523,-7.75 -13.523,-22.25 
+				-21.314,-22.25 			"/>
+			<polygon fill="#DCDCDC" stroke="#231F20" stroke-miterlimit="10" points="-28.962,-7.75 -21.169,-7.75 -21.169,-22.25 
+				-28.962,-22.25 			"/>
+			<line fill="none" stroke="#231F20" stroke-miterlimit="10" x1="-28.962" y1="-22.25" x2="-50.26" y2="-22.25"/>
+			<line fill="none" stroke="#231F20" stroke-miterlimit="10" x1="-28.962" y1="-7.75" x2="-50.26" y2="-7.75"/>
+		</g>
+		<g id="fifo_15_">
+			<polygon fill="#FFFFFF" points="-40.892,19.25 -19.594,19.25 -19.594,4.75 -40.892,4.75 			"/>
+			<polygon fill="#DCDCDC" stroke="#231F20" stroke-miterlimit="10" points="-4.153,19.25 3.64,19.25 3.64,4.75 -4.153,4.75 			"/>
+			<polygon fill="#DCDCDC" stroke="#231F20" stroke-miterlimit="10" points="-11.947,19.25 -4.153,19.25 -4.153,4.75 -11.947,4.75 
+							"/>
+			<polygon fill="#DCDCDC" stroke="#231F20" stroke-miterlimit="10" points="-19.594,19.25 -11.801,19.25 -11.801,4.75 
+				-19.594,4.75 			"/>
+			<line fill="none" stroke="#231F20" stroke-miterlimit="10" x1="-19.594" y1="4.75" x2="-40.892" y2="4.75"/>
+			<line fill="none" stroke="#231F20" stroke-miterlimit="10" x1="-19.594" y1="19.25" x2="-40.892" y2="19.25"/>
+		</g>
+		<g id="fifo_14_">
+			<polygon fill="#FFFFFF" points="-44.788,23.5 -23.489,23.5 -23.489,9 -44.788,9 			"/>
+			<polygon fill="#DCDCDC" stroke="#231F20" stroke-miterlimit="10" points="-8.052,23.5 -0.259,23.5 -0.259,9 -8.052,9 			"/>
+			<polygon fill="#DCDCDC" stroke="#231F20" stroke-miterlimit="10" points="-15.842,23.5 -8.051,23.5 -8.051,9 -15.842,9 			"/>
+			<polygon fill="#DCDCDC" stroke="#231F20" stroke-miterlimit="10" points="-23.488,23.5 -15.696,23.5 -15.696,9 -23.488,9 			"/>
+			<line fill="none" stroke="#231F20" stroke-miterlimit="10" x1="-23.488" y1="9" x2="-44.788" y2="9"/>
+			<line fill="none" stroke="#231F20" stroke-miterlimit="10" x1="-23.488" y1="23.5" x2="-44.788" y2="23.5"/>
+		</g>
+		<g id="fifo_13_">
+			<polygon fill="#FFFFFF" points="-50.379,27.5 -29.081,27.5 -29.081,13 -50.379,13 			"/>
+			<polygon fill="#DCDCDC" stroke="#231F20" stroke-miterlimit="10" points="-13.644,27.5 -5.851,27.5 -5.851,13 -13.644,13 			"/>
+			<polygon fill="#DCDCDC" stroke="#231F20" stroke-miterlimit="10" points="-21.435,27.5 -13.644,27.5 -13.644,13 -21.435,13 			
+				"/>
+			<polygon fill="#DCDCDC" stroke="#231F20" stroke-miterlimit="10" points="-29.081,27.5 -21.288,27.5 -21.288,13 -29.081,13 			
+				"/>
+			<line fill="none" stroke="#231F20" stroke-miterlimit="10" x1="-29.081" y1="13" x2="-50.379" y2="13"/>
+			<line fill="none" stroke="#231F20" stroke-miterlimit="10" x1="-29.081" y1="27.5" x2="-50.379" y2="27.5"/>
+		</g>
+		<text transform="matrix(1.4195 0 0 1 -38.0508 -0.25)" font-family="'ArialMT'" font-size="18">…</text>
+	</g>
+	<polygon fill="#FFFFFF" stroke="#231815" stroke-miterlimit="10" points="50.5,6.5 12.924,6.5 12.924,26 50.5,26 	"/>
+	<text transform="matrix(1 0 0 -1 16.5527 12.5)" font-family="'AdobeSongStd-Light-GBpc-EUC-H'" font-size="12">Reqer</text>
+	<polygon fill="#FFFFFF" stroke="#231815" stroke-miterlimit="10" points="50.5,-28.75 12.924,-28.75 12.924,-9.25 50.5,-9.25 	"/>
+	<text transform="matrix(1 0 0 -1 18.5527 -22.75)" font-family="'AdobeSongStd-Light-GBpc-EUC-H'" font-size="12">Scher</text>
+</symbol>
+<use xlink:href="#Queue"  width="116" height="87" id="XMLID_1_" x="-58" y="-43.5" transform="matrix(1 0 0 -1 164.9358 71)" overflow="visible"/>
+<rect x="10" y="56.5" fill="none" stroke="#231F20" stroke-miterlimit="10" width="46" height="29"/>
+<text transform="matrix(1 0 0 1 19.9998 76.5)" font-family="'ArialMT'" font-size="14">In0</text>
+<g>
+	<g>
+		<line fill="none" stroke="#231F20" stroke-miterlimit="10" x1="56" y1="71" x2="100.375" y2="71"/>
+		<g>
+			<polygon fill="#231F20" points="107.436,71 97.486,75.065 99.847,71 97.486,66.936 			"/>
+		</g>
+	</g>
+</g>
+<rect x="10" y="166.25" fill="none" stroke="#231F20" stroke-miterlimit="10" width="46" height="29"/>
+<text transform="matrix(1 0 0 1 20.9998 186.25)" font-family="'ArialMT'" font-size="14">In1</text>
+<g>
+	<g>
+		<line fill="none" stroke="#231F20" stroke-miterlimit="10" x1="56" y1="180.75" x2="100.375" y2="180.75"/>
+		<g>
+			<polygon fill="#231F20" points="107.436,180.75 97.486,184.815 99.847,180.75 97.486,176.686 			"/>
+		</g>
+	</g>
+</g>
+<rect x="10" y="277.5" fill="none" stroke="#231F20" stroke-miterlimit="10" width="46" height="29"/>
+<text transform="matrix(1 0 0 1 18.9998 297.5)" font-family="'ArialMT'" font-size="14">In2</text>
+<g>
+	<g>
+		<line fill="none" stroke="#231F20" stroke-miterlimit="10" x1="56" y1="292" x2="100.375" y2="292"/>
+		<g>
+			<polygon fill="#231F20" points="107.436,292 97.486,296.064 99.847,292 97.486,287.936 			"/>
+		</g>
+	</g>
+</g>
+<rect x="10" y="387.25" fill="none" stroke="#231F20" stroke-miterlimit="10" width="46" height="29"/>
+<text transform="matrix(1 0 0 1 19.9998 407.25)" font-family="'ArialMT'" font-size="14">In3</text>
+<g>
+	<g>
+		<line fill="none" stroke="#231F20" stroke-miterlimit="10" x1="56" y1="401.75" x2="100.375" y2="401.75"/>
+		<g>
+			<polygon fill="#231F20" points="107.436,401.75 97.486,405.815 99.847,401.75 97.486,397.686 			"/>
+		</g>
+	</g>
+</g>
+<path fill="none" stroke="#000000" stroke-miterlimit="10" d="M418,432.75c0,6.627-5.373,12-12,12h-78c-6.628,0-12-5.373-12-12V40
+	c0-6.627,5.372-12,12-12h78c6.627,0,12,5.373,12,12V432.75z"/>
+<g>
+	<path fill="none" stroke="#231F20" stroke-miterlimit="10" d="M395.09,85.5h-16.012c0,0-24.013,232.75-29.739,232.75
+		c-5.712,0-11.43,0-11.43,0"/>
+	<path fill="none" stroke="#231F20" stroke-miterlimit="10" d="M337.909,85.5h16.005c0,0,24.015,232.75,29.736,232.75
+		s11.438,0,11.438,0"/>
+</g>
+<text transform="matrix(1 0 0 1 353.4993 394.125)" font-family="'ArialMT'" font-size="14">ARB</text>
+<rect x="343.5" y="371.125" fill="none" stroke="#000000" stroke-miterlimit="10" width="47" height="35.25"/>
+<rect x="501" y="56.5" fill="none" stroke="#231F20" stroke-miterlimit="10" width="46" height="29"/>
+<text transform="matrix(1 0 0 1 502.9993 76.5)" font-family="'ArialMT'" font-size="14">Res0</text>
+<g>
+	<g>
+		<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="418" y1="71" x2="493.939" y2="71"/>
+		<g>
+			<polygon points="501,71 491.051,75.065 493.411,71 491.051,66.936 			"/>
+		</g>
+	</g>
+</g>
+<rect x="501" y="166.25" fill="none" stroke="#231F20" stroke-miterlimit="10" width="46" height="29"/>
+<text transform="matrix(1 0 0 1 504.9993 186.25)" font-family="'ArialMT'" font-size="14">Res1</text>
+<g>
+	<g>
+		<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="418" y1="180.75" x2="493.939" y2="180.75"/>
+		<g>
+			<polygon points="501,180.75 491.051,184.815 493.411,180.75 491.051,176.686 			"/>
+		</g>
+	</g>
+</g>
+<rect x="501" y="277.5" fill="none" stroke="#231F20" stroke-miterlimit="10" width="46" height="29"/>
+<text transform="matrix(1 0 0 1 502.9993 297.5)" font-family="'ArialMT'" font-size="14">Res2</text>
+<g>
+	<g>
+		<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="418" y1="292" x2="493.939" y2="292"/>
+		<g>
+			<polygon points="501,292 491.051,296.064 493.411,292 491.051,287.936 			"/>
+		</g>
+	</g>
+</g>
+<rect x="501" y="387.25" fill="none" stroke="#231F20" stroke-miterlimit="10" width="46" height="29"/>
+<text transform="matrix(1 0 0 1 504.9993 407.25)" font-family="'ArialMT'" font-size="14">Res3</text>
+<g>
+	<g>
+		<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="418" y1="401.75" x2="493.939" y2="401.75"/>
+		<g>
+			<polygon points="501,401.75 491.051,405.815 493.411,401.75 491.051,397.686 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="229.496" y1="93.25" x2="308.939" y2="93.25"/>
+		<g>
+			<polygon points="222.436,93.25 232.385,97.315 230.024,93.25 232.385,89.186 			"/>
+		</g>
+		<g>
+			<polygon points="316,93.25 306.051,97.315 308.411,93.25 306.051,89.186 			"/>
+		</g>
+	</g>
+</g>
+<text transform="matrix(1 0 0 1 248.9998 107)" font-family="'ArialMT'" font-size="14">req/gnt</text>
+<text transform="matrix(1 0 0 1 258.9998 46.5)" font-family="'ArialMT'" font-size="14">cell</text>
+<g>
+	<g>
+		<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="229.496" y1="204.375" x2="308.939" y2="204.375"/>
+		<g>
+			<polygon points="222.436,204.375 232.385,208.44 230.024,204.375 232.385,200.311 			"/>
+		</g>
+		<g>
+			<polygon points="316,204.375 306.051,208.44 308.411,204.375 306.051,200.311 			"/>
+		</g>
+	</g>
+</g>
+<text transform="matrix(1 0 0 1 248.9998 218.125)" font-family="'ArialMT'" font-size="14">req/gnt</text>
+<g>
+	<g>
+		<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="229.496" y1="315.625" x2="308.939" y2="315.625"/>
+		<g>
+			<polygon points="222.436,315.625 232.385,319.689 230.024,315.625 232.385,311.561 			"/>
+		</g>
+		<g>
+			<polygon points="316,315.625 306.051,319.689 308.411,315.625 306.051,311.561 			"/>
+		</g>
+	</g>
+</g>
+<text transform="matrix(1 0 0 1 248.9998 329.375)" font-family="'ArialMT'" font-size="14">req/gnt</text>
+<g>
+	<g>
+		<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="229.496" y1="425.375" x2="308.939" y2="425.375"/>
+		<g>
+			<polygon points="222.436,425.375 232.385,429.44 230.024,425.375 232.385,421.311 			"/>
+		</g>
+		<g>
+			<polygon points="316,425.375 306.051,429.44 308.411,425.375 306.051,421.311 			"/>
+		</g>
+	</g>
+</g>
+<text transform="matrix(1 0 0 1 248.9998 439.125)" font-family="'ArialMT'" font-size="14">req/gnt</text>
+<g>
+	<g>
+		<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="222.436" y1="52.75" x2="308.939" y2="52.75"/>
+		<g>
+			<polygon points="316,52.75 306.051,56.815 308.411,52.75 306.051,48.686 			"/>
+		</g>
+	</g>
+</g>
+<text transform="matrix(1 0 0 1 258.9998 150.125)" font-family="'ArialMT'" font-size="14">cell</text>
+<g>
+	<g>
+		<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="222.436" y1="156.375" x2="308.939" y2="156.375"/>
+		<g>
+			<polygon points="316,156.375 306.051,160.44 308.411,156.375 306.051,152.311 			"/>
+		</g>
+	</g>
+</g>
+<text transform="matrix(1 0 0 1 258.9998 265.375)" font-family="'ArialMT'" font-size="14">cell</text>
+<g>
+	<g>
+		<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="222.436" y1="271.625" x2="308.939" y2="271.625"/>
+		<g>
+			<polygon points="316,271.625 306.051,275.689 308.411,271.625 306.051,267.561 			"/>
+		</g>
+	</g>
+</g>
+<text transform="matrix(1 0 0 1 258.9998 375.125)" font-family="'ArialMT'" font-size="14">cell</text>
+<g>
+	<g>
+		<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="222.436" y1="381.375" x2="308.939" y2="381.375"/>
+		<g>
+			<polygon points="316,381.375 306.051,385.439 308.411,381.375 306.051,377.311 			"/>
+		</g>
+	</g>
+</g>
+<use xlink:href="#Queue"  width="116" height="87" x="-58" y="-43.5" transform="matrix(1 0 0 -1 166.4963 179)" overflow="visible"/>
+<use xlink:href="#Queue"  width="116" height="87" x="-58" y="-43.5" transform="matrix(1 0 0 -1 165.0925 292)" overflow="visible"/>
+<use xlink:href="#Queue"  width="116" height="87" x="-58" y="-43.5" transform="matrix(1 0 0 -1 164.1399 402.5)" overflow="visible"/>
+<path fill="none" stroke="#D11D1A" stroke-miterlimit="10" d="M147.99,439.125c0,10.709-3.987,19.375-8.915,19.375"/>
+<text transform="matrix(1 0 0 1 127.1399 469.5)" font-family="'AdobeSongStd-Light-GBpc-EUC-H'" font-size="12">VOQ</text>
+</svg>

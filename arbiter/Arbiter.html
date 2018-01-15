@@ -1,0 +1,276 @@
+﻿<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Arbiter</title>
+<style type="text/css">
+.强调 {
+	color: #F00;
+}
+</style>
+</head>
+
+<body>
+<blockquote>
+  <p><strong>目录</strong></p>
+</blockquote>
+<ol>
+  <li>概念
+    <ol>
+      <li><a href="#仲裁结构">仲裁结构</a></li>
+      <li><a href="#匹配">最大匹配和极大匹配</a></li>
+    </ol>
+  </li>
+  <li>仲裁算法
+    <ol>
+      <li><a href="#DPA">DPA</a></li>
+      <li><a href="#BDPA">BDPA</a></li>
+      <li><a href="#ESLIP">ESLIP</a></li>
+      <li><a href="#MSLIP">MSLIP</a></li>
+    </ol>
+  </li>
+  <li>仲裁结构
+    <ol>
+      <li><a href="#集中仲裁">集中仲裁</a></li>
+      <li><a href="#分布仲裁">分布仲裁</a></li>
+    </ol>
+  </li>
+</ol>
+<hr/>
+<h1>概念</h1>
+<h2><a name="仲裁结构"></a>仲裁结构</h2>
+<p>仲裁指多端口并发无冲突选择,或者多端口并行匹配。仲裁可以应用于许多场景，例如: 对拥有4个输入与4个输出的网络进行输入出输出端囗的匹配(交换网); 对多源业务流在多个处理单元的均衡(MapReduce)。仲裁基本结构为：</p>
+<embed src="svg/crossbar.svg"/>
+<ul>
+<li>输入端囗(Input): </Ii>
+<li>选择资源(Resource): </li>
+<li>VOQ队列: 按照资源设置队列</li>
+<li>请求器(Request): 按照仲裁器请求格式提请求</li>
+<li>仲裁器(Arbiter): </Ii>
+多端口匹配<li>调度器(Scher): 按照仲裁Grant选择合适的数据出队</li>
+</ul>
+<p>Input和Resource之间有3种匹配模式。</p>
+<ol>
+<li>单匹配(unimatch): 一个输入仅能选择一个资源，一个资源也仅能被一个输入选择。</li>
+<li>多匹配(multimatch): 一个输入可以同时选择多个资源，但一个资源仅能被一个输入选择。</li>
+<li>任意匹配(anymatch): 一个输入可以在一组资源中任意选择一个，一个资源仅能破一个输入选择。</li>
+</ol>
+<p>其中每个输入端口的队列结构和请求格式为：</p>
+  <embed src="svg/Arbiter_Queue_Structure.svg"/>
+<h2><a name="匹配"></a>最大匹配和极大匹配</h2>
+<p>最大匹配：指仲裁器在一次仲裁中，理论上可以建立的输入、输出最大匹配个数。</p>
+<p>极大匹配：考虑到实际的仲裁器都采用迭代算法，没有回退机制。所以给定仲裁算法的一次仲裁最大匹配个数称为极大匹配。 </p>
+<hr/>
+<h1>仲裁算法</h1>
+<h2><a name="DPA"></a>DPA (Diagonal Priority Arbite: 对角线优先仲裁)</h2>
+<p>全局设置一个指针。该指针指向相互正交的请求元素。</p>
+<h3>原理</h3>
+<p>全局设置一个指针。选择一组相互正交的请求，作为选择的优先级。</p>
+<p>DPA不是迭代算法，理论上一次运算就得到极大匹配。所以很适合Anymatch。</p>
+<p>
+  <embed src="svg/dpa_soft.svg"></embed>
+</p>
+<h3>软件模型</h3>
+<p>软件实现按照原理模型中的列组指针、列指针仲裁优先级串行选择仲裁结果。类似于多维的调度选择算法。</p>
+<h4>算法</h4>
+<ol>
+  <li>优先枚举列组指针gptr所在的列：col = gptr；
+    <ol>
+      <li>枚举当前col列的所有元素。优先从当前列的列指针指向的元素开始：row = ptr[col]；</li>
+      <li>当前选择请求：Req = R[row][col]；</li>
+      <li>若Req有请求，则该请求获得Grant。同时，
+        <ol>
+          <li>清除原始请求表R中，R[row]行的所有请求。</li>
+          <li>清除原始请求表R中，R[*][col]列的所有请求。</li>
+          <li>跳转到2</li>
+        </ol>
+      </li>
+      <li>若Req无请求
+        <ol>
+          <li>若当前列的所有请求都枚举完成，则跳转到2.</li>
+          <li>否则，row = （row+1）%ROW_NUM。跳转到1.2执行。</li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+  <li>若所有列枚举完成，结束。</li>
+  <li>否则，枚举下一列：col = (col+1)%COL_NUM</li>
+</ol>
+<h3>&nbsp;</h3>
+<h3>逻辑实现</h3>
+<p>
+  <embed src="svg/dpa_logic.svg"></embed>
+</p>
+<p>DPA算法各指针下的最高优先级元素之间为正交关系。DPA算法的本质是：</p>
+<ol>
+  <li>把请求表中相互正交的元素组成一组，每组使用一个指针来标识（计算）；</li>
+  <li>TDM轮询各个正交组，每次仲裁都从一组正交组的元素作为高优先级元素开始；</li>
+  <li>仲裁遵循正交选择原则。</li>
+</ol>
+<table width="324" border="1" cellspacing="1" cellpadding="1">
+<caption>
+    DPA算法指针最高优先级元素
+  </caption>
+  <tr>
+    <th width="54" scope="col">指针</th>
+    <th width="61" scope="col">元素0</th>
+    <th width="45" scope="col">元素1</th>
+    <th width="63" scope="col">元素2</th>
+    <th width="73" scope="col">元素3</th>
+  </tr>
+  <tr>
+    <th scope="row">0</th>
+    <td>A0</td>
+    <td>B1</td>
+    <td>C2</td>
+    <td>D3</td>
+  </tr>
+  <tr>
+    <th scope="row">1</th>
+    <td>A1</td>
+    <td>B2</td>
+    <td>C3</td>
+    <td>D0</td>
+  </tr>
+  <tr>
+    <th scope="row">2</th>
+    <td>A2</td>
+    <td>B3</td>
+    <td>C0</td>
+    <td>D1</td>
+  </tr>
+  <tr>
+    <th scope="row">3</th>
+    <td>A3</td>
+    <td>B0</td>
+    <td>C1</td>
+    <td>D2</td>
+  </tr>
+</table>
+<a href="svg/dpa_core.txt">verilog</a>
+<hr/>
+<h2><a name="BDPA"></a>BDPA (Balance DPA：均衡DPA)</h2>
+<p>BDPA在普通DPA算法的基础上增加了列组、列指针，从而解决DPA算法的不均衡问题。</p>
+<h3>原理</h3>
+<ol>
+  <li>请求矩阵的各列之间设置一个指针（称为：列组指针），标识优先选择的列及优先选择顺序；</li>
+  <li>请求矩阵的各列内设置一个指针（称为：列指针），标识列内优先选择的行及优先选择顺序；</li>
+</ol>
+<p>
+  <embed src="svg/bdpa_soft.svg" align="middle"></embed>
+</p>
+<h3>逻辑实现</h3>
+<p>
+  <embed src="svg/bdpa_logic.svg" align="middle"></embed>
+</p>
+<p><a href="bdpa_core.txt">Verilog</a></p>
+<hr/>
+<h2><a name="ESLIP"></a>ESLIP （Extent SLIP）</h2>
+<h3>原理</h3>
+<ol>
+  <li>所有的资源各自独立(相互不协商)地选择一个有请求的输入——资源选择</li>
+  <li>然后所有的输入又各自独立(相互不协商)地对资源的选择结果进行选择输入选择——输入选择
+    <ul>
+      <li>注意：对于Anymatch业务，不进行输入选择</li>
+    </ul>
+  </li>
+</ol>
+<p>资源和输入各自独立的一次选择被称为一次迭代。ESLIP是一个迭代仲裁算法。 每次迭代完成后，屏蔽已经获得仲裁的请求。 迭代次数越多，当前仲裁获得的Grant越多。迭代次数与获得Grant个数基本满足对数曲线。对于X个输入到Y各输出的仲裁匹配，理论上至少需要迭代Log(min(X,Y))次才能获得较好的仲裁效率。</p>
+
+  <embed src="svg/Mslip_iter.svg"/>
+
+<h3>Example</h3>
+<p>4男A，B，C，D与4女a, b, c, d相亲。首先男选女：其中A，C选择了b，B选择了a，D选择了d；其次女选男：b选择了A，a和d没得选只能选择唯一的B和D，c没得可选。所以A和b，B和a，D和d配对成功。第二轮选择，只剩下了C和c，所有C只能选c，c也只能选C。所有人完成配对。</p>
+
+<p>为了防止多个仲裁节点的指针同步，一般建议仅在多次迭代的第一次更新指针。</p>
+<h3>软件实现</h3>
+<ol>
+<li>每一列按照各自的调度规则选择一个请求。</li>
+<li>每一行按照列选择的结果按照各自的调度规则选择一个结果</li>
+</ol>
+  <embed src="svg/eslip_soft.svg"/>
+<h3>逻辑实现</h3>
+  <embed src="svg/eslip_logic.svg"/>
+<p>图中，SCO是输出选择单元。每个输出端口拥有一个输出选择单元。输出选择单元完成一个输出端口对所有对该输出有请求的输入进行选择，选择算法根据需要设计，可以为任意的算法。理论上每个输出端口的选择算法可以不同。SCI为输入选择单元，与SCO类似，完成一个输入端口对所有输出选择结果的选择。REQ，SCI与SCO直接通过CLOS网络连接。其中REQ[i]到SCO[j]的连线表示第i个输入到第j个输出的请求；SCO[j]到SCI[k]的连线表示第j个输出的仲裁结果到第k个输入的请求。通过以上结构实，SCO实现了输出选输入，SCI再对SCO的选择结果进行输入选输出。</p>
+<h3>Expand-线速仲裁器</h3>
+<p>迭代仲裁算法需要多次迭代才能达到理想的仲裁效果。并且每次迭代都需要SCO和SCI两次选择，两次选完后才能更新指针。</p>
+<p>为了实现线速输出，可以把第一级SCO选择设置2个指针：0时隙使用A指针，1时隙使用B指针。在1时隙时，SCI也选择完结果，更新A指针。所以2时隙再使用更新后的A指针，3时隙使用更新后的B指针。以此类推，实现PIPELINE的指针流水。</p>
+<p>为实现线速输出，允许只迭代一次。由于指针碰撞导致的带宽损失在多次仲裁后指针会错开。所以，只要流量变化基本稳定，在略有加速比时，还是可以达到线速输出。</p>
+
+<hr/>
+<h2><a name="MSLIP"></a>MSLIP</h2>
+<p>MSLIP是ESLIP的抽象扩展版本。</p>
+<ul>
+  <li>支持输入、输出端口的不对称。例如：输入为M个端口，输出为N个端口；</li>
+  <li>支持多优先级；</li>
+  <li>支持多维匹配选择
+    <ul>
+      <li>倒数第二个节点到最后一个输出节点的选择为路由选择；</li>
+      <li>其它节点的选择为选路选择（有多条路径可以选择）；</li>
+    </ul>
+  </li>
+</ul>
+<h3>逻辑实现</h3>
+<p>
+  <embed src="svg/mslip_logic.svg"></embed>
+</p>
+<p>说明：</p>
+<ol>
+  <li>理论上MSLIP的请求只需要按{src, des}设置为两维。因为中间“选路”的请求默认就是“全1”（可以选择任意一条路径）。但若算法需要制定选择路径时，也可以在请求中显式的标记出来；</li>
+  <li>每个仲裁节点都是n个请求到n个grant的仲裁。
+    <ul>
+      <li>请求可表示为r[pri][n]的bitmap形式，代表第n个源的pri个优先级对该节点有请求；</li>
+      <li>Grant表示为g[pri][n]的bitmap形式，代表第n个源的pri个优先级获得仲裁；
+        <ul>
+          <li>若Grant为Onehot形式，则该节点为单选择仲裁（单播）</li>
+          <li>若Grant为Bitmap形式，则该节点为多选择仲裁（多播）</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>仲裁节点指针更新，理论上需要在最终仲裁完成后才进行。 </li>
+</ol>
+<h3>线速仲裁器</h3>
+<p>MSLIP一次仲裁需要多次迭代。若需要线速获得仲裁，可以要求每个仲裁节点保存中间选择值。这时，每个仲裁节点各自独立更新指针。</p>
+<p>线速仲裁器对于稳定请求，一般在Log(min(X,Y))次后仲裁效率稳定。</p>
+<hr/>
+<h2>比较</h2>
+<table width="100%" border="1">
+  <caption>
+    DPA VS SLIP
+  </caption>
+  <tr>
+    <th width="67" scope="col">&nbsp;</th>
+    <th width="140" scope="col">DPA</th>
+    <th width="217" scope="col">MRR</th>
+    <th width="189" scope="col">SLIP</th>
+  </tr>
+  <tr>
+    <th scope="row">公平性</th>
+    <td>只有一个指针，公平性差</td>
+    <td>一个行指针和多个列指针，公平性中</td>
+    <td>每个节点独立指针，公平性好</td>
+  </tr>
+  <tr>
+    <th scope="row">收敛时间</th>
+    <td>1cycle</td>
+    <td>1cycle</td>
+    <td>Log2(min(InN, ResN))</td>
+  </tr>
+  <tr>
+    <th scope="row">应用场景</th>
+    <td>公平性要求不高场景。例如：地址回收</td>
+    <td>收敛时间要求高，公平性要求也高的场景。例如：LBS</td>
+    <td>匹配性能要求高场景。例如：交叉仲裁</td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<hr/>
+<h1>扩展应用</h1>
+<h2><a name="集中仲裁"></a>XBar</h2>
+<p>整个MSLIP算法由一个内聚的算法仲裁器完成。仲裁器独立完成所有输入、输出端口请求的仲裁，然后给出所有端口的仲裁结果。</p>
+<p>
+  <embed src="svg/XBar.svg"></embed>
+</p>
+<h2><a name="分布仲裁"></a></h2>
+</body>
+</html>
