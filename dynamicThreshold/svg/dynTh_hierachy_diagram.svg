@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 15.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="595.28px" height="377px" viewBox="0 0 595.28 377" enable-background="new 0 0 595.28 377" xml:space="preserve">
+<ellipse fill="#FFFFFF" stroke="#000000" stroke-miterlimit="10" cx="278" cy="134" rx="62" ry="36"/>
+<ellipse fill="#FFFFFF" stroke="#000000" stroke-miterlimit="10" cx="160.616" cy="305.804" rx="62" ry="36"/>
+<ellipse fill="#FFFFFF" stroke="#000000" stroke-miterlimit="10" cx="414.616" cy="305.804" rx="62" ry="36"/>
+<g>
+	<g>
+		<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="278" y1="42" x2="278" y2="90.939"/>
+		<g>
+			<polygon points="278,98 273.935,88.051 278,90.412 282.064,88.051 			"/>
+		</g>
+	</g>
+</g>
+<text transform="matrix(1 0 0 1 262 124)" font-family="'AdobeSongStd-Light-GBpc-EUC-H'" font-size="14">DTH</text>
+<text transform="matrix(1 0 0 1 248 144)" font-family="'AdobeSongStd-Light-GBpc-EUC-H'" font-size="14">( grp{0,1} )</text>
+<text transform="matrix(1 0 0 1 113 318)" font-family="'AdobeSongStd-Light-GBpc-EUC-H'" font-size="14">( user{A,B,C,D} )</text>
+<text transform="matrix(1 0 0 1 368 320)" font-family="'AdobeSongStd-Light-GBpc-EUC-H'" font-size="14">( user{A,B,C,D} )</text>
+<text transform="matrix(1 0 0 1 146 300)" font-family="'AdobeSongStd-Light-GBpc-EUC-H'" font-size="14">DTH</text>
+<text transform="matrix(1 0 0 1 397 300)" font-family="'AdobeSongStd-Light-GBpc-EUC-H'" font-size="14">DTH</text>
+<g>
+	<rect x="257.5" y="57" fill="#FFFFFF" width="41" height="23"/>
+	<text transform="matrix(1 0 0 1 265.5 72)" font-family="'AdobeSongStd-Light-GBpc-EUC-H'" font-size="14">Sgrp</text>
+</g>
+<g>
+	<g>
+		<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="278" y1="170" x2="165.995" y2="265.23"/>
+		<g>
+			<polygon points="160.616,269.804 165.563,260.262 166.397,264.889 170.829,266.456 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="278" y1="170" x2="408.915" y2="265.639"/>
+		<g>
+			<polygon points="414.616,269.804 404.185,267.218 408.488,265.328 408.98,260.653 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<rect x="198.808" y="203.5" fill="#FFFFFF" width="41" height="23"/>
+	<text transform="matrix(1 0 0 1 206.8081 218.5)" font-family="'AdobeSongStd-Light-GBpc-EUC-H'" font-size="14">Sgrp0</text>
+</g>
+<g>
+	<rect x="311.615" y="203.5" fill="#FFFFFF" width="41" height="23"/>
+	<text transform="matrix(1 0 0 1 319.6152 218.5)" font-family="'AdobeSongStd-Light-GBpc-EUC-H'" font-size="14">Sgrp1</text>
+</g>
+</svg>

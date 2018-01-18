@@ -1,0 +1,84 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  </head>
+  <body>
+
+<h1>Dynamic Thresthold (DTH)</h1>
+<p>Backpress feedback is used usually to distribute shared resource which shares between all user. Traditional threshold for backpress is configurable and fixed in a scen.For improve the ultilization rate of resource and  maximum share resource, override config of backpress threshold is used. For example, a buffer which has 100 store cell is shared with 4 user. The backpress threshold should be large than 25, for example 50. This configure fits in with only 2 user scen. But when there are 4 user use the shared resource at the same time, the threshold 50 may be result in HOL.</p>
+
+<p>DTH aim the target of maximum share buffer ultilization rate in all source users, and has not HOL.</p>
+
+
+<h2>Principle</h2>
+<p>DTH privudes a effective share mechanism that  the backpress threshold dynamic decrease along with resource occupation increase.</p>
+
+<p>The formula of standard DTH is:</p>
+<img src="png/dynTh_standard_formula.png" alt="">
+</img>
+<ul><li>th</li></ul>
+<p>The threshold of backpress calculated by DTH. All users use the same threshold.</p>
+<ul><li>a</li></ul>
+<p>Share coeffcient. The more the large one user can use in the shared resource.</p>
+<ul><li>S</li></ul>
+<p>The total quantity of resouce all users can use.</p>
+<ul><li>Gap</li></ul>
+<p>Gap between S and shared quantity of resource.</p>
+<ul><li>cnt(i)</li></ul>
+<p>The occupation quantity of user i.</p>
+
+<p>When all users occur enough resource and trigger DTH backpress. Finilly, when the system is stabe, the cnt(i) is equal to th, so: </p>
+
+<img src="png/dynTh_stability_th.png" alt="">
+</img>
+<p>Formula above reprents that every user has the mean quantity of resource when stablility. For example, when only one user use the resource, the user can use all of the resource. But when there are four users, thery should share the resource and each can use 1/4 of the total resource.(NOTE: Actually, the maximun occupation which one user can obtain is a/(1+a)) </p>
+
+
+<p>Different occupation is experted by users in practice. For example, user A may expert twice than user B. It means th of user A is twice than
+user B. We set a(A) to a*2 and a(B) to a*1, It meats the expert. So the DTH transforms to:</p>
+<img src="png/dynTh_formula.png" alt=""></img>
+<br/>
+<embed src="svg/formula_curve.svg" />
+
+<p>Effect of DTH is:</p>
+<embed src="svg/DynTh_standard_effect.svg"/>
+
+<h2>Resverse DTH(RDTH)</h2>
+<p>Excessive shared-coefficient is not a good new for new user. For example, there are three users(userA userB and userC) sharing the total resource. So, ecah user occurs 1/3 resource. For the new user(userD), It is not enough and will trigger backpress soon although userD will has 1/4 occupation finally. A reserve space is expected for userD.</p>
+<p>Resverse DTH (RDTH) fixs the bug above through split a resversed field from total resource    for each user which can reach from resversed threshold. RDTH splits total resource into two fields, one called resversed field which is a sum of all the user's resversed fields, the other called shared field which can be used by all of the users.</p>
+<p>There are many solution fix this problem:</p>
+
+<h3>Isolate Solution</h3>
+
+<p>The architecture is:</p>
+<ul>
+<li>Set two count for each user
+  <ul>
+  <li>Resversed count: Stat the quantity which occupy resversed field. The count increases when it is small than resversed threshold, and decreases when shared count is zero.</li>
+  <li>Shared count: Stat the quantity which occupy shared field. The count increases when reversed count is equal to resversed threshold, and decreases when it is non-zero.</li>
+  </ul>
+</li>
+<li>Calculate DTH just use shared count.</li>
+<li>Calculate result of feedback just use shared count.</li>
+</ul>
+<img src="png/dynTh_isolate_solution.png" alt=""/>
+<p>The effect is:</p>
+<embed src="svg/dynTh_isolate_effect.svg"/>
+<h3>Assocate Solution</h3>
+<p>Isolate solution is very effective through use resversed first. But It requires more count and more price.</p>
+<p>It is same with the common DTH, just deasset feedback when stat count is small than resversed threshold in calculating the result of feedback.</p>
+<img src="png/dynTh_assoc_solution.png" alt=""/>
+<p>The effect is:</p>
+<embed src="svg/dynTh_assoc_effect.svg"/>
+
+
+<h2>Hierarchy DTH</h2>
+<p>All users can not use all of the resource. It need a hierachy resource management. </p>
+<p>For example, the total resource is shared by two user group, and each group includes some users. A DTH(named DTH-0) is used to the threshold in the two group. And another two DTH(named DTH-10 and DTH-11) in users for each group.</p>
+<p>DTH-0 results two threshold th-0 and th-1. For  the DTH-10, th-0 will replace S in DTH formula. And th-1 is same. The skill is called huerarchy DTHs.</p>
+<img src="png/dynTh_hierachy_principle.png"/>
+<p>Hierachy DTH  represents generally by:</p>
+<embed src="svg/dynTh_hierachy_diagram.svg"/>
+
+  </body>
+</html>

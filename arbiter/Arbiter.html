@@ -28,7 +28,8 @@
       <li><a href="#MSLIP">MSLIP</a></li>
     </ol>
   </li>
-  <li>仲裁结构
+  <li>Arbiter Structure</li>
+  <li>Arbiter System
     <ol>
       <li><a href="#集中仲裁">集中仲裁</a></li>
       <li><a href="#分布仲裁">分布仲裁</a></li>
@@ -146,7 +147,7 @@
     <td>D2</td>
   </tr>
 </table>
-<a href="svg/dpa_core.txt">verilog</a>
+<a href="code/dpa_core_verilog.txt">verilog</a>
 <hr/>
 <h2><a name="BDPA"></a>BDPA (Balance DPA：均衡DPA)</h2>
 <p>BDPA在普通DPA算法的基础上增加了列组、列指针，从而解决DPA算法的不均衡问题。</p>
@@ -162,7 +163,7 @@
 <p>
   <embed src="svg/bdpa_logic.svg" align="middle"></embed>
 </p>
-<p><a href="bdpa_core.txt">Verilog</a></p>
+<p><a href="code/bdpa_core_verilog.txt">Verilog</a></p>
 <hr/>
 <h2><a name="ESLIP"></a>ESLIP （Extent SLIP）</h2>
 <h3>原理</h3>
@@ -195,6 +196,10 @@
 <p>迭代仲裁算法需要多次迭代才能达到理想的仲裁效果。并且每次迭代都需要SCO和SCI两次选择，两次选完后才能更新指针。</p>
 <p>为了实现线速输出，可以把第一级SCO选择设置2个指针：0时隙使用A指针，1时隙使用B指针。在1时隙时，SCI也选择完结果，更新A指针。所以2时隙再使用更新后的A指针，3时隙使用更新后的B指针。以此类推，实现PIPELINE的指针流水。</p>
 <p>为实现线速输出，允许只迭代一次。由于指针碰撞导致的带宽损失在多次仲裁后指针会错开。所以，只要流量变化基本稳定，在略有加速比时，还是可以达到线速输出。</p>
+<p><a href="code/eslip_core_verilog.txt">Verilog</a></p>
+<h3>Iterative Arbiter</h3>
+<p>迭代仲裁算法也可以使用如下的迭代仲裁器来实现</p>
+<embed src="svg/iterative_arbiter.svg" />
 
 <hr/>
 <h2><a name="MSLIP"></a>MSLIP</h2>
