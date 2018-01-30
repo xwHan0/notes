@@ -206,7 +206,7 @@
 			<text x="1.47" y="418.8" class="st5" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>M<tspan class="st6"
 						v:langID="2052">=</tspan><tspan class="st6" v:langID="2052">max</tspan><tspan class="st6" v:langID="2052">(</tspan><tspan
 						class="st6" v:langID="2052">M</tspan><tspan class="st6" v:langID="2052">0</tspan><tspan class="st6"
-						v:langID="2052">,</tspan><tspan class="st6" v:langID="2052">used</tspan><tspan class="st6" v:langID="2052">)</tspan></text>		</g>
+						v:langID="2052">,</tspan><tspan class="st6" v:langID="2052">used+R</tspan><tspan class="st6" v:langID="2052">)</tspan></text>		</g>
 		<g id="shape28-77" v:mID="28" v:groupContext="shape" transform="translate(398.25,-287.55)">
 			<title>工作表.6</title>
 			<desc>MaxM</desc>
