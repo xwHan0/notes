@@ -70,8 +70,33 @@ user B. We set a(A) to a*2 and a(B) to a*1, It meats the expert. So the DTH tran
 <img src="png/dynTh_assoc_solution.png" alt=""/>
 <p>Assume that the alpha coefficient is various among users, the formular is shown:</p>
 <img src="png/formula.png" />
-<p>The effect is:</p>
+
+<p>The total space is split into three parts:</p>
+<ul>
+<li>Reversed Space: Each service flow just uses unique space designated to itself.</li>
+<li>Shared Space: All service flows share all of the space. In specially, any service flow can uses the whole shared space. Dynamic threshold algorithm is applied to manage and decide the space among all services.</li>
+<li>Headroom Space: </li>
+</ul>
+<p>A service uses reversed space in prior. After the reversed space is full, the service uses shared space. </p>
 <embed src="svg/dynTh_assoc_effect.svg"/>
+<p>To shared and reversed management aim, we should locates two statistic counters to each service: </p>
+<ul>
+<li>A reversed counter:
+  <ul>
+  <li>Named with "_rcnt" postfix</li>
+  <li>Counts the occupatuon in reversed space</li>
+  <li>Increases count when reversed space is not full</li>
+  <li>Decreases count when shared space is empty</li>
+  </ul>
+<li>A shared counter:</li>
+  <ul>
+  <li>Named with "_scnt" postfix</li>
+  <li>Counts the occupatuon in shared space</li>
+  <li>Increases count when reversed space is full</li>
+  <li>Decreases count when shared space is not empty</li>
+  </ul>
+</li>
+</ul>
 
 
 <h2>Hierarchy DTH</h2>
