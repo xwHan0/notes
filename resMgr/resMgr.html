@@ -15,12 +15,14 @@
 <li>Shared Space: All service flows share all of the space. In specially, any service flow can uses the whole shared space.    
   <ul>
   <li>Dynamic threshold algorithm is applied to manage and decide the space among all services through flow control mechanism.</li>
+  <li>The shared total space = M - GAP - sum(Ri) </li>
   </ul>
 </li>
 <li>Headroom Space: 
   <ul>
   <li>Headroom space is used to absorb the overflow of flow control and resverse the space for special serveice. The gap value is decided by RTT of flow control and basic space quantity of special service need.</li>
   <li>Multi-threshold algorithm based as various priority services is suitable to generate a flow control to manage the headroom space</li>
+  <li>When (scnt+rcnt)&gt;=(M-GAP), it goes into headroom space.</li>
   </ul>
 </li>
 </ul>
