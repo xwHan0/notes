@@ -5,29 +5,33 @@
   <body>
 
 <h1>Space Management</h1>
-<p>The total space is split into three parts:</p>
+<p>The total space (T) is split into three parts:</p>
 <ul>
 <li>Reversed Space: Each service flow just uses unique space designated to itself.
   <ul>
-  <li>Do not throw flow control when reversed space is not full.</li>
-  </ul>
-</li>
-<li>Shared Space: All service flows share all of the space. In specially, any service flow can uses the whole shared space.    
-  <ul>
-  <li>Dynamic threshold algorithm is applied to manage and decide the space among all services through flow control mechanism.</li>
-  <li>The shared total space = M - GAP - sum(Ri) </li>
+  <li>Do not generate flow control when service's reversed space is not full.</li>
+  <li>The reversed space: R = sum(Ri), where Ri is the reversed space for service #i.</li>
   </ul>
 </li>
 <li>Headroom Space: 
   <ul>
-  <li>Headroom space is used to absorb the overflow of flow control and resverse the space for special serveice. The gap value is decided by RTT of flow control and basic space quantity of special service need.</li>
+  <li>Headroom space is used to absorb the overflow of flow control and resverse the space for special serveice. </li>
+  <li>The headroom space (G) is decided by RTT of flow control and basic space quantity of special service need.</li>
   <li>Multi-threshold algorithm based as various priority services is suitable to generate a flow control to manage the headroom space</li>
-  <li>When (scnt+rcnt)&gt;=(M-GAP), it goes into headroom space.</li>
   </ul>
 </li>
+<li>Shared Space: All service flows share all of the space. In specially, any one service flow can uses the whole shared space.    
+  <ul>
+  <li><a href="dynth.html">Dynamic threshold algorithm</a> is applied to manage and decide the space among all services through flow control mechanism.</li>
+  <li>The shared space: S = M - G - R, where M is the total usablity space. </li>
+  </ul>
+</li>
+
 </ul>
-<p>A service uses reversed space in prior. After the reversed space is full, the service uses shared space. </p>
-<embed src="svg/dynTh_assoc_effect.svg"/>
+<p>A service uses reversed space in prior. When the reversed space is full, the service uses shared space. 
+  After the shared space is full, it goes into headroom space.
+</p>
+<embed src="svg/spaceMgr.svg"/>
 <p>To shared and reversed management aim, we should locates two statistic counters to each service: </p>
 <ul>
 <li>A reversed counter:
@@ -48,7 +52,14 @@
 </ul>
 
 <h2>Resource Utilization Rate</h2>
-<p>utili = (R+scnt)/(R+S)</p>
+<img src="png/util.png"/>
+<h2>Total usability Space</h2>
+<p>Total usability space (M) represents the total usable space current. The value of M should be small than total
+  space T. In some scenarios, M may be adjusted on-lines by some algorithm, such as hierarchy space scenario.
+  In this case, we must make sure the M inside the scope between current used space and T.
+</p>
+<img src="png/usabilitySpace.png" />
+<p>where, M0 is the expected M value from some algorithm. And R is a configured adjusted parameter.</p>
 
 <h1>Hierarchy Space Management</h1>
 <p>In some scenarios, the total space should not distribute into the final users directly. There may be severial middle layers who is  looked like a virtual user between final users and total space. This application is called hierarchy space management.</p>
