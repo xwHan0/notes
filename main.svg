@@ -1,0 +1,297 @@
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="6000" height="6000" 
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+
+<defs>
+  <g id="func_box">
+    <line x1="0" y1="15" x2="30" y2="15" stroke-width="1" stroke="#000000"/>
+    <rect x="30" width="300" height="30" fill="#eeeeee" stroke="#000000"/>
+  </g>
+  <g id="func_box2">
+    <use xlink:href="#func_box" x="0" y="0"/>
+    <use xlink:href="#func_box" x="0" y="30"/>
+  </g>
+  <g id="func_box4">
+    <use xlink:href="#func_box2" x="0" y="0"/>
+    <use xlink:href="#func_box2" x="0" y="60"/>
+  </g>
+  <g id="func_box6">
+    <use xlink:href="#func_box2" x="0" y="0"/>
+    <use xlink:href="#func_box4" x="0" y="60"/>
+  </g>
+  <g id="func_box8">
+    <use xlink:href="#func_box4" x="0" y="0"/>
+    <use xlink:href="#func_box4" x="0" y="120"/>
+  </g>
+  <g id="func_box16">
+    <use xlink:href="#func_box8" x="0" y="0"/>
+    <use xlink:href="#func_box8" x="0" y="240"/>
+  </g>
+  <g id="func_2box">
+    <line x1="0" y1="30" x2="30" y2="30" stroke-width="1" stroke="#000000"/>
+    <rect x="30" width="300" height="60" fill="#eeeeee" stroke="#000000"/>
+  </g>
+  <g id="func_3box">
+    <line x1="0" y1="45" x2="30" y2="45" stroke-width="1" stroke="#000000"/>
+    <rect x="30" width="300" height="90" fill="#eeeeee" stroke="#000000"/>
+  </g>
+  <g id="func_4box">
+    <line x1="0" y1="65" x2="30" y2="65" stroke-width="1" stroke="#000000"/>
+    <rect x="30" width="300" height="120" fill="#eeeeee" stroke="#000000"/>
+  </g>
+  
+
+  
+  <g id="ele_arithmetic">
+    <text x="10" y="15">arithmetic</text>
+    <line x1="0" y1="15" x2="100" y2="15" stroke="#000000"/>
+    <line x1="30" y1="15" x2="30" y2="200" stroke="#000000"/>
+    <use xlink:href="#func_box2" x="30" y="30"/>
+    <text x="65" y="165">(**|pow &amp; tersons)</text>
+    <text x="65" y="195">(log &amp; tersons)</text>
+  </g>
+  
+
+
+  
+  
+ 
+
+  
+  <g id="arithmatic_func">
+    <use xlink:href="#func_4box" x="0" y="0"/>
+    <text y="15">
+      <tspan x="35" fill="blue">Arithmatic Function</tspan>
+      <tspan x="35" dy="20">Syntax: (</tspan><tspan fill="green">xxx</tspan><tspan>[!] &amp; tsrs)</tspan>
+      <tspan x="35" dy="20" fill="green">xxx</tspan><tspan>=add,minus,mul,div</tspan>
+      <tspan x="35" dy="20">Use default 0 to first parameter when </tspan> 
+      <tspan x="35" dy="20">has only one parameter for add and </tspan>
+      <tspan x="35" dy="20">minus. For mul and div it is 1.</tspan>
+    </text>
+  </g>
+  
+  <g id="common_func">
+    <text x="10" y="15">Common Function</text>
+    <line x1="0" y1="15" x2="100" y2="15" stroke="#000000"/>
+    <line x1="30" y1="15" x2="30" y2="200" stroke="#000000"/>
+    <use xlink:href="#func_box6" x="30" y="30"/>
+    <text x="65" y="45">(abs[!] tsr)</text>
+    <text x="65" y="75">(ceil[!] tsr [bound-tsr=1])</text>
+    <text x="65" y="105">(floor[!] tsr [bound-tsr=1])</text>
+    <text x="65" y="135">(round[!] tsr)</text>
+    <text x="65" y="165">(clamp[!] tsr min max)</text>
+  </g>
+  
+  <g id="compare_func">
+    <use xlink:href="#func_2box" x="0" y="30"/>
+    <text>
+      <tspan x="35" y="45" fill="blue">Compare Function</tspan>
+      <tspan x="55" dy="20">Syntax: (</tspan><tspan fill="green">xxx</tspan><tspan> &amp; tsrs)</tspan>
+      <tspan x="35" dy="20" fill="green">xxx</tspan><tspan>=ne,le,lt,ge,gt</tspan>
+    </text>
+    <use xlink:href="#func_box" x="0" y="90"/>
+    <text x="35" y="105">(ne tsrA tsrB)</text>
+    <use xlink:href="#func_box" x="0" y="120"/>
+    <text x="35" y="135">(cmp tsrA tsrB)</text>
+  </g>
+  
+  <g id="expoent_func">
+    <use xlink:href="#func_2box" x="0" y="30"/>
+    <text>
+      <tspan x="35" y="45" fill="blue">Exponent Function</tspan>
+      <tspan x="55" dy="20">Syntax: (</tspan><tspan fill="green">xxx</tspan><tspan>[!] tsr)</tspan>
+      <tspan x="35" dy="20" fill="green">xxx</tspan><tspan>=sqrt,cbrt,log,log10,ln,logistic</tspan>
+    </text>
+    <use xlink:href="#func_box" x="0" y="90"/>
+    <text x="35" y="105">(pow[!] tsr &amp; exponent-num)</text>
+  </g>
+  
+  <g id="argular_func">
+    <use xlink:href="#func_3box" x="0" y="30"/>
+    <text y="45">
+      <tspan x="35" fill="blue">Argular Function</tspan>
+      <tspan x="55" dy="20">Syntax: (</tspan><tspan fill="green">xxx</tspan><tspan>[!] tsr)</tspan>
+      <tspan x="35" dy="20" fill="green">xxx</tspan><tspan>=sin,cos,tan,asin,acos,atan,tanh</tspan>
+      <tspan x="35" dy="20">cosh, to-degress, to-radians</tspan>
+    </text>
+  </g>
+  
+  <g id="statistic_func">
+    <use xlink:href="#func_2box" x="0" y="30"/>
+    <text y="45">
+      <tspan x="35" fill="blue">Statistic Function</tspan>
+      <tspan x="55" dy="20">Syntax: (</tspan><tspan fill="green">xxx</tspan><tspan>[!] &amp; tsrs)</tspan>
+      <tspan x="35" dy="20" fill="green">xxx</tspan><tspan>=min,max,sum,prod,mean,sd</tspan>
+    </text>
+  </g>
+  
+  <g id="ele_by">
+    <text x="10" y="15">Element Wise</text>
+    <line x1="0" y1="15" x2="300" y2="15" stroke="#000000"/>
+    <line x1="30" y1="15" x2="30" y2="900" stroke="#000000"/>
+    <text y="30">
+      <tspan x="35">When oprerators have same shape, calculate</tspan>
+      <tspan x="35" dy="20"> element by element. When operator is a scalar, </tspan>
+      <tspan x="35" dy="20">boardcast scalar to same shape tensor first and </tspan>
+      <tspan x="35" dy="20">calculate.</tspan>
+    </text>
+    <use xlink:href="#arithmatic_func" x="30" y="120"/>
+    <use xlink:href="#compare_func" x="30" y="230"/>
+    <use xlink:href="#expoent_func" x="30" y="370"/>
+    <use xlink:href="#argular_func" x="30" y="480"/>
+    <use xlink:href="#statistic_func" x="30" y="570"/>
+    <use xlink:href="#common_func" x="30" y="690"/>
+  </g>
+  
+  <g id="tensor_create">
+    <use xlink:href="#func_3box" x="0" y="10"/>
+    <text>
+      <tspan x="35" y="25" fill="blue">Create Function</tspan>
+      <tspan x="55" dy="20">Syntax: (</tspan><tspan fill="green">xxx</tspan><tspan>[?] [impl] data)</tspan>
+      <tspan x="35" dy="20" fill="green">xxx</tspan><tspan>=array,vector,matrix,column-matrix,</tspan>
+      <tspan x="35" dy="20">row-matrix</tspan>
+    </text>
+    <use xlink:href="#func_box6" x="0" y="100"/>
+    <text x="33" y="115">(assign[!] tsr a)</text>
+    <text x="33" y="145">(compute-matrix [impl] shape f)</text>
+  </g>
+  
+  <g id="tensor_pro">
+    <use xlink:href="#func_4box" x="0" y="15"/>
+    <text y="30">
+      <tspan x="35" fill="blue">Property</tspan>
+      <tspan x="55" dy="20">Syntax: (</tspan><tspan fill="green">xxx</tspan><tspan> tsr)</tspan>
+      <tspan x="35" dy="20" fill="green">xxx</tspan><tspan>=trace,det,density,dimension,shape,</tspan>
+      <tspan x="35" dy="20">zero-count,non-zero-count,row-count,</tspan>
+      <tspan x="35" dy="20">column-count</tspan>
+    </text>
+  </g>
+  
+  <g id="MapReduce">
+    <text x="10" y="15">MapReduce</text>
+    <line x1="0" y1="15" x2="100" y2="15" stroke="#000000"/>
+    <line x1="30" y1="15" x2="30" y2="200" stroke="#000000"/>
+    <use xlink:href="#func_box6" x="30" y="30"/>
+    <text x="65" y="45">map(proc &amp; iterators)</text>
+    <text x="65" y="75">mapcat(proc &amp; iterators)</text>
+    <text x="65" y="105"></text>
+    <text x="65" y="135"></text>
+    <text x="65" y="165"></text>
+  </g>
+  
+  <g id="tensor_judge">
+    <text x="10" y="15">Judgement Function</text>
+    <line x1="0" y1="15" x2="300" y2="15" stroke="#000000"/>
+    <line x1="30" y1="15" x2="30" y2="200" stroke="#000000"/>
+    <use xlink:href="#func_box6" x="30" y="30"/>
+    <text x="65" y="45">(comforming? tsr-a tsr-b)</text>
+    <text x="65" y="75">(mset[!] tsr &amp; dimenions value)</text>
+    <text x="65" y="105">(rows r)</text>
+    <text x="65" y="135">(columns c)</text>
+    <text x="65" y="165"></text>
+  </g>
+  
+  <g id="tensor_product">
+    <use xlink:href="#func_4box" x="0" y="15"/>
+    <text y="30">
+      <tspan x="35" fill="blue">Product</tspan>
+      <tspan x="55" dy="20">Syntax: (</tspan><tspan fill="green">xxx</tspan><tspan>[!] &amp; tsr)</tspan>
+      <tspan x="35" dy="20" fill="green">xxx</tspan><tspan>=mmul,inner-product,outer-product</tspan>
+      <tspan x="35" dy="20">cross,dot,convolute</tspan>
+      <tspan x="35" dy="20"></tspan>
+    </text>
+  </g>
+
+  <g id="tensor_calc">
+    <text x="10" y="15">Basic Calculate Function</text>
+    <line x1="0" y1="15" x2="100" y2="15" stroke="#000000"/>
+    <line x1="30" y1="15" x2="30" y2="200" stroke="#000000"/>
+    <use xlink:href="#func_box6" x="30" y="30"/>
+    <text x="65" y="45">(transpose[!] tsr [ordering])</text>
+    <text x="65" y="75">(transform[!] tsr v)</text>
+    <text x="65" y="105">(reshape[!] tsr shape])</text>
+    <text x="65" y="135"></text>
+    <text x="65" y="165"></text>
+  </g>
+
+  <g id="tensor_perf_opt">
+    <text x="10" y="15">Performance Optimized Function</text>
+    <line x1="0" y1="15" x2="100" y2="15" stroke="#000000"/>
+    <line x1="30" y1="15" x2="30" y2="200" stroke="#000000"/>
+    <use xlink:href="#func_box6" x="30" y="30"/>
+    <text x="65" y="45">(add-inner-product! tsrAdd tsrPdtA tsrPdtB [factor])</text>
+    <text x="65" y="75">(add-product[!] tsrAdd tsrPdtA tsrPdtB)</text>
+    <text x="65" y="105">(add-row tsrAdd rowDes rowSrc factor])</text>
+    <text x="65" y="135">(add-scaled[!] tsrAdd a factor)</text>
+    <text x="65" y="165">(add-scaled-product[!] tsrAdd a b factor)</text>
+  </g>
+  
+  
+  
+  <g id="tensor">
+    <text x="10" y="15">Tensor</text>
+    <line x1="0" y1="15" x2="100" y2="15" stroke="#000000"/>
+    <line x1="30" y1="15" x2="30" y2="900" stroke="#000000"/>
+    <use xlink:href="#tensor_create" x="30" y="30"/>
+    <use xlink:href="#tensor_pro" x="30" y="290"/>
+    <use xlink:href="#MapReduce" x="30" y="440"/>
+    <use xlink:href="#tensor_judge" x="30" y="700"/>
+  </g>
+  
+  <g id="tensor_compute">
+    <text x="10" y="15">Tensor</text>
+    <line x1="0" y1="15" x2="100" y2="15" stroke="#000000"/>
+    <line x1="30" y1="15" x2="30" y2="900" stroke="#000000"/>
+    <use xlink:href="#tensor_product" x="30" y="30"/>
+    <use xlink:href="#tensor_calc" x="30" y="670"/>
+    <use xlink:href="#tensor_perf_opt" x="30" y="890"/>
+  </g>
+
+  
+  <g id="decomp_func">
+    <use xlink:href="#func_2box" x="0" y="30"/>
+    <text y="45">
+      <tspan x="35" fill="blue">Decomp Function</tspan>
+      <tspan x="55" dy="20">Syntax: (decomp-</tspan><tspan fill="green">xxx</tspan><tspan> tsr)</tspan>
+      <tspan x="35" dy="20" fill="green">xxx</tspan><tspan>=cholesky,eigenvalue,lu,qr,svd</tspan>
+    </text>
+  </g>
+  
+  <g id="matrix">
+    <text x="10" y="15">Matrix</text>
+    <line x1="0" y1="15" x2="100" y2="15" stroke="#000000"/>
+    <line x1="30" y1="15" x2="30" y2="900" stroke="#000000"/>
+    <use xlink:href="#decomp_func" x="30" y="310"/>
+  </g>
+  
+  <g id="broadcast">
+    <text x="10" y="15">Boardcast Function</text>
+    <line x1="0" y1="15" x2="150" y2="15" stroke="#000000"/>
+    <line x1="30" y1="15" x2="30" y2="200" stroke="#000000"/>
+    <text y="35">
+      <tspan x="35" fill="blue">Implict Broadcast</tspan>
+      <tspan x="35" dy="20">Iterate all dimensions of tensors. For #i dimension,</tspan>
+      <tspan x="35" dy="20">sa=(dimension tsrA i) and sb=(dimnsion tsrB i)</tspan>
+      <tspan x="35" dy="20">* If sa!=0 and sb==0, set sb=1.</tspan>
+      <tspan x="35" dy="20">* If sa=N*sb (N=1,2...), broadcast sb's elements N</tspan>
+      <tspan x="35" dy="20">times and fills extend dimension size to match sa.</tspan>
+      <tspan x="35" dy="20">* This mechanizm is same for sb=N*sa</tspan>
+    </text>
+    <use xlink:href="#func_box6" x="30" y="180"/>
+    <text y="200">
+      <tspan x="65">(boardcast tsr shape)</tspan>
+      <tspan x="65" dy="30">(boardcast-like tsr-like tsr)</tspan>
+    </text>
+  </g>
+
+</defs>
+  
+  <use xlink:href="#tensor" x="10" y="0"/>
+  <use xlink:href="#ele_by" x="400" y="0"/>
+  <use xlink:href="#tensor_compute" x="800" y="0"/>
+  <use xlink:href="#matrix" x="1200" y="0"/>
+  <use xlink:href="#broadcast" x="10" y="1000"/>
+ 
+
+</svg>
