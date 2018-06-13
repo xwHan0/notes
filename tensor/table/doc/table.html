@@ -1,0 +1,42 @@
+<html>
+<head>
+<meta charset="UTF-8"/>
+<link rel="stylesheet" type="text/css" href="css/syntax.css"/>
+</head>
+<body>
+
+<h1>Introduce</h1>
+<p>Table(表，缩写T)是一种二维有限离散数据结构。</p>
+<embed src="svg/table.svg" />
+<p>Table的第一个维度sequence，第二个维度为map。可以使用嵌套一维数组表示为：</p>
+<pre>
+    tblName = [{field0: value0, field1: value1, ..., fieldN: valueN}]
+</pre>
+
+<h1>Query</h1>
+<p>Query使用一个或者多个table和其它一些参数，计算出一个新的table。输出table使用field来标识，计算使用输入table的field来标识。</p>
+
+<h2>Syntax</h2>
+<pre>
+<span id="keyword">SELECT</span> field-or-fieldProc-list
+<span id="keyword">FROM</span> table-or-tableFunc-list
+<span id="syntax">[</span><span id="keyword">WHERE</span> fieldPred-or-fieldProcPred-list<span id="syntax">]</span>
+<span id="syntax">[</span><span id="keyword">GROUP BY</span> fieldPred-or-fieldProc-list
+  <span id="syntax">[</span><span id="keyword">HAVING</span> fieldPred-or-fieldProcPred-list<span id="syntax">]</span>
+<span id="syntax">]</span>
+<span id="syntax">[</span><span id="keyword">ORDER BY</span> fieldPred-or-fieldProcPred-list<span id="syntax">]</span>
+</pre>
+
+
+<h1>Basic Queue Function</h1>
+<ul>
+    <li>filter</li>
+    <li>group</li>
+    <li>sort</li>
+    <li>all</li>
+    <li>first</li>
+    <li>last</li>
+</ul>
+
+</body>
+</html>

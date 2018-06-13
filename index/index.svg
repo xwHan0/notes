@@ -1,0 +1,222 @@
+<?xml-stylesheet href='css/basic.css' type='text/css'?>
+<svg width='1100' height='1000' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+  <defs>
+
+
+    <!-- 数据结构 -->
+    <g id='dataStructure'>
+        
+        <g id='sequence'>
+            <rect x='0' y='0' width='120' height='50' stroke='black' fill='darkgrey' />
+            <text y='20'>
+                <tspan x='10' dy='0'>Sequence</tspan>
+                <tspan x='10' dy='20' font-size='0.7rem'>List | Map</tspan>
+            </text>
+        </g>
+        <g id='2D'>
+            <g id='table'>
+                <rect x='0' y='0' width='60' height='30' stroke='black' fill='white' />
+                <text y='20'>
+                    <tspan x='10' dy='0'>Table</tspan>
+                </text>
+            </g>
+            <g id='matrix'>
+                <rect x='0' y='0' width='60' height='30' stroke='black' fill='white' />
+                <text y='20'>
+                    <tspan x='10' dy='0'>Matrix</tspan>
+                </text>
+            </g>
+            <rect x='0' y='0' width='120' height='30' stroke='black' fill='white' />
+            <text y='20'>
+                <tspan x='10' dy='0'>2D</tspan>
+            </text>
+            <use xlink:href='#matrix' x='0' y='30' />
+            <use xlink:href='#table' x='60' y='30' />
+        </g>
+
+        <rect x='0' y='0' width='240' height='30' stroke='black' fill='white' />
+        <text y='20'>
+            <tspan x='10' dy='0'>dataStructure</tspan>
+        </text>
+        <use xlink:href='#sequence' x='0' y='30' />
+        <use xlink:href='#2D' x='120' y='30' />
+    </g>
+
+    <!-- 交换原理 -->
+    <g id='switch'>
+        <rect x='0' y='0' width='100' height='30' stroke='black' fill='white' />
+        <text y='20'>
+            <tspan x='10' dy='0'>Switch</tspan>
+        </text>
+    </g>
+
+    <!-- 计划 -->
+    <g id='taskMgr'>
+        <rect x='0' y='0' width='100' height='30' stroke='black' fill='white' />
+        <text y='20'>
+            <tspan x='10' dy='0'>taskMgr</tspan>
+        </text>
+    </g>
+
+    <!-- 调度算法 -->
+    <g id='Scheduler'>
+      <g id='SchedulerAlgorithm'>
+        <g id='WRR'>
+            <rect x='0' y='0' width='50' height='30' stroke='black' fill='white' />
+            <text y='20'>
+                <tspan x='7' dy='0'>WRR</tspan>
+            </text>
+        </g>
+        <g id='TDM'>
+            <rect x='0' y='0' width='50' height='30' stroke='black' fill='white' />
+            <text y='20'>
+                <tspan x='7' dy='0'>TDM</tspan>
+            </text>
+        </g>
+        <g id='DPA'>
+            <rect x='0' y='0' width='50' height='30' stroke='black' fill='white' />
+            <text y='20'>
+                <tspan x='7' dy='0'>DPA</tspan>
+            </text>
+        </g>
+        <g id='EIAA'>
+            <rect x='0' y='0' width='50' height='30' stroke='black' fill='white' />
+            <text y='20'>
+                <tspan x='7' dy='0'>EIAA</tspan>
+            </text>
+        </g>
+        <!-- TOP -->
+        <rect x='0' y='0' width='500' height='80' stroke='black' fill='bisque' />
+        <text y='20'>
+            <tspan x='7' dy='0'>Scheduler</tspan>
+        </text>
+        <use xlink:href='#TDM' x='50' y='30' />
+        <use xlink:href='#WRR' x='150' y='30' />
+        <use xlink:href='#DPA' x='250' y='30' />
+        <use xlink:href='#EIAA' x='350' y='30' />
+      </g>
+      <g id='SchedulerMiddleware'>
+        <g id='Shaper'>
+            <rect x='0' y='0' width='70' height='30' stroke='black' fill='white' />
+            <text y='20'>
+                <tspan x='7' dy='0'>Shaper</tspan>
+            </text>
+        </g>
+        <g id='PPM'>
+            <rect x='0' y='0' width='50' height='30' stroke='black' fill='white' />
+            <text y='20'>
+                <tspan x='7' dy='0'>PPM</tspan>
+            </text>
+        </g>
+        <g id='MPS'>
+            <rect x='0' y='0' width='50' height='30' stroke='black' fill='white' />
+            <text y='20'>
+                <tspan x='7' dy='0'>MPS</tspan>
+            </text>
+        </g>
+        <g id='PPB'>
+            <rect x='0' y='0' width='50' height='30' stroke='black' fill='white' />
+            <text y='20'>
+                <tspan x='7' dy='0'>PPB</tspan>
+            </text>
+        </g>
+        <g id='PS'>
+            <rect x='0' y='0' width='50' height='30' stroke='black' fill='white' />
+            <text y='20'>
+                <tspan x='7' dy='0'>PS</tspan>
+            </text>
+        </g>
+        <!-- TOP -->
+        <rect x='0' y='0' width='500' height='80' stroke='black' fill='aquamarine' />
+        <text y='20'>
+            <tspan x='7' dy='0'>Middleware</tspan>
+        </text>
+        <use xlink:href='#Shaper' x='50' y='30' />
+        <use xlink:href='#PPM' x='200' y='30' />
+        <use xlink:href='#MPS' x='280' y='30' />
+        <use xlink:href='#PPB' x='350' y='30' />
+        <use xlink:href='#PS' x='420' y='30' />
+      </g>
+      <g id='SchedulerCore'>
+        <g id='Graph'>
+            <rect x='0' y='0' width='70' height='30' stroke='black' fill='white' />
+            <text y='20'>
+                <tspan x='7' dy='0' class='tool'>Graph</tspan>
+            </text>
+        </g>
+        <!-- TOP -->
+        <rect x='0' y='0' width='500' height='80' stroke='black' fill='darkgrey' />
+        <text y='20'>
+            <tspan x='7' dy='0'>Core</tspan>
+        </text>
+        <use xlink:href='#Graph' x='50' y='30' />
+      </g>
+      <!-- TOP -->
+      <use xlink:href='#SchedulerMiddleware' x='0' y='00' />
+      <use xlink:href='#SchedulerAlgorithm' x='0' y='80' />
+      <use xlink:href='#SchedulerCore' x='0' y='160' />
+    </g>
+
+    <g id='comlib'>
+        <g id='xmap'>
+            <rect x='0' y='0' width='160' height='20' stroke='black' fill='white' />
+            <text y='15'>
+                <tspan x='7' dy='0'>map</tspan>
+            </text>
+        </g>
+        <g id='xfilter'>
+            <rect x='0' y='0' width='160' height='20' stroke='black' fill='white' />
+            <text y='15'>
+                <tspan x='7' dy='0'>filter</tspan>
+            </text>
+        </g>
+        <g id='xgroup'>
+            <rect x='0' y='0' width='160' height='20' stroke='black' fill='white' />
+            <text y='15'>
+                <tspan x='7' dy='0'>group</tspan>
+            </text>
+        </g>
+        <g id='xsort'>
+            <rect x='0' y='0' width='160' height='20' stroke='black' fill='white' />
+            <text y='15'>
+                <tspan x='7' dy='0'>sort</tspan>
+            </text>
+        </g>
+        <g id='xreduce'>
+            <rect x='0' y='0' width='160' height='20' stroke='black' fill='white' />
+            <text y='15'>
+                <tspan x='7' dy='0'>reduce</tspan>
+            </text>
+        </g>
+        <use xlink:href='#xmap' x='0' y='0' />
+        <use xlink:href='#xfilter' x='0' y='20' />
+        <use xlink:href='#xgroup' x='0' y='40' />
+        <use xlink:href='#xsort' x='0' y='60' />
+        <use xlink:href='#xreduce' x='0' y='80' />
+    </g>
+
+    <!-- 计划 -->
+    <g id='Flask'>
+        <rect x='0' y='0' width='100' height='30' stroke='black' fill='white' />
+        <text y='20'>
+            <tspan x='10' dy='0'>Flask</tspan>
+        </text>
+    </g>
+
+  </defs>
+
+
+  <!--path d="M50 80 L350 80 L1050 80 L1050 60 L1080 100 L1050 140 L1050 120 L350 120 L50 120 Z"
+    fill="url(#orange_red)" stroke="black" / -->
+
+    <use xlink:href='#dataStructure' x='100' y='100' />
+    <use xlink:href='#switch' x='100' y='300' />
+    <use xlink:href='#taskMgr' x='100' y='400' />
+    <use xlink:href='#Flask' x='100' y='500' />
+    <use xlink:href='#Scheduler' x='500' y='100' />
+    <use xlink:href='#comlib' x='500' y='400' />
+
+
+
+</svg>

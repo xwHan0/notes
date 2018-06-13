@@ -1,0 +1,30 @@
+body {
+    font-family : 'Times New Roman';
+    font-size : 16px;
+}
+
+.doc > rect {
+    fill: antiquewhite;
+}
+
+.doc > text {
+    font-weight: bold;
+}
+
+.tool > rect {
+    fill: blue;
+    stroke: white;
+}
+
+.tool > text {
+    font-weight: bold;
+    fill:white;
+}
+
+.comment > rect {
+    fill:white;
+}
+
+.comment > text {
+    font-size: 0.7rem;
+}
