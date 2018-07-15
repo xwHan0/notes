@@ -6,6 +6,7 @@ items = [ \
     {'name':'Switch', 'x':100, 'y':100}, \
     {'name':'Flask', 'x':100, 'y':150, 'class':'tool'}, \
     {'name':'taskMgr', 'x':100, 'y':180, 'class':'tool'}, \
+    {'name':'xrange', 'x':200, 'y':100, 'class':'tool'} \
     ]
 
 detail_components = [ \

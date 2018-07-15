@@ -1,0 +1,41 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<h1>Tutorial</h1>
+<div class="code">
+<div class="codeTitle">appName/__init__.py - Package主文件</div>
+<div>
+<pre>
+from flask import Flask    #<a href="import">导入相关类</a>
+
+app = Flask(__name__, )    #<a href="instance">实例化主类</a>
+app.config =     #<a href="config">配置</a>
+
+@app.route('/')    #<a href=router">路由处理</a>
+def index():
+    return "hello,world!"
+    
+app.run(...)    #<a href="run">运行实例</a>
+</pre>
+</div>
+</div>
+
+<h1>Usage</h1>
+
+<h2>Config</h2>
+<p>配置class。</p>
+<p>提供如下的基本配置方法</p>
+<ul>
+    <li>函数配置
+        <ul>
+            <li>Syntax: config.from_mapping(key0=val0,...,keyN=valN)</li>
+        </ul>
+    </li>
+</ul>
+
+</body>
+</html>
