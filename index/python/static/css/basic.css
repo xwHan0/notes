@@ -28,3 +28,7 @@ body {
 .comment > text {
     font-size: 0.7rem;
 }
+
+.tree_list > rect {
+    fill: whitesmoke;
+}

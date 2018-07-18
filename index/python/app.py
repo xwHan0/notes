@@ -1,5 +1,19 @@
 from flask import Flask, render_template, url_for
 
+class tree_list():
+    def __init__(self,content,height=30,width=100,offset=40):
+        self.content = content
+        self.height = height
+        self.width=width
+        self.offset=offset
+        self.style = 'tree_list'
+    
+    def setXY(self,x,y):
+        self.x = x
+        self.y = y
+        return self
+
+
 app = Flask(__name__)
 
 items = [ \
@@ -26,7 +40,13 @@ detail_components = [ \
     }
 ]
 
+tree_lists = [ \
+    tree_list("xrange").setXY(400,100)
+]
+
 @app.route('/')
 def index():
-    return render_template('index.html', items=items, detail_components=detail_components)
+    return render_template('index.html', items=items, detail_components=detail_components, tree_lists=tree_lists)
 
+# if __name__ == '__main__':
+#     app.run()
