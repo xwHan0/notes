@@ -16,3 +16,7 @@ div.codeTitle {
     border-bottom: 1px solid #000000;
     background-color: yellow;
 }
+
+div.codeStep {
+    background-color: #DDDDDD;
+}
