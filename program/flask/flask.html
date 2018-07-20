@@ -125,7 +125,7 @@ appName/router.py - 主路由文件
 <div>
 <pre>
 ......
-from adminPages import admin  #导入子路由库
+from . import admin  #导入子路由库
 app.register_blueprint(admin, url_prefix='/admin')    #注册子路由 
 ......
 </pre>

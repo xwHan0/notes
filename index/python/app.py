@@ -27,7 +27,7 @@ detail_components = [ \
     {'name':'bwMgr', 'x':300, 'y':300, 'width':300, 'height':100,
      'detail': [ \
             {'title':'Middleware', 'content':' Shaper | PPM | MSP | PPB | PS'},
-            {'title':'Scheduler', 'content':' TDM | WRR | DPA | EIAA'},
+            {'title':'Scheduler', 'content':' TDM | WRR | WFQ | DPA | EIAA'},
             {'title':'Core', 'content':' Graph | hierachy-sc'},
         ]
     },
@@ -35,6 +35,13 @@ detail_components = [ \
      'detail': [ \
             {'title':'Space', 'content':' headroom | shared | reserved'},
             {'title':'Algorithm', 'content':' dyn-threshold | multi-threshold '},
+            {'title':'Core', 'content':' hierachy'},
+        ]
+    },
+    {'name':'Flask', 'x':300, 'y':900, 'width':300, 'height':100,
+     'detail': [ \
+            {'title':'HTTP Component', 'content':' Route | Request | Response | Session | Redirect'},
+            {'title':'Assist Component', 'content':' url_for | blueprint '},
             {'title':'Core', 'content':' hierachy'},
         ]
     }
