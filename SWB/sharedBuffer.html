@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/basic.css">
+  </head>
+ 
+  <body>
+
+  <p>Headroom空间必须可以Cover前级的突发，否则可能会造成断流。</p>
+  <ul>
+      <li>IXB-1: 分发数据到4个OBF
+          <ul>
+              <li>普通数据按BDPA在4个OBF之间均匀分发</li>
+          </ul>
+      </li>
+      <li>IXB-2: 分发数据到MB</li>
+      <li>OXB-1: 乱序读出</li>
+      <li>OXB-2: 分发到MB</li>
+      <li>OMUX: 读出选择</li>
+  </ul>
+
+  <ul>
+      <li>OBS: 读出位序调整</li>
+  </ul>
+
+  </body>
+
+</html>
