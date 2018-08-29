@@ -6,22 +6,106 @@
  
   <body>
 
-  <p>Headroom空间必须可以Cover前级的突发，否则可能会造成断流。</p>
+  <p></p>
   <ul>
-      <li>IXB-1: 分发数据到4个OBF
-          <ul>
-              <li>普通数据按BDPA在4个OBF之间均匀分发</li>
-          </ul>
-      </li>
-      <li>IXB-2: 分发数据到MB</li>
-      <li>OXB-1: 乱序读出</li>
-      <li>OXB-2: 分发到MB</li>
-      <li>OMUX: 读出选择</li>
+    <li>IXB-1: 分发数据到4个MBG。
+      <ul>
+        <li>2x4架构：相邻2个MBG共享</li>
+        <li>4x4架构：TBD。后端问题</li>
+      </ul>
+    </li>
+    <li>IXB-2: 分发数据到MB</li>
+    <li>OXB-1: 乱序读出
+      <ul>
+        <li>为了保证一个OXB-2输出不冲突，4个OXB-1使用TDM</li>
+      </ul>
+    </li>
+    <li>OXB-2: 分发到MB</li>
+    <li>OMUX: 读出选择</li>
   </ul>
 
   <ul>
       <li>OBS: 读出位序调整</li>
   </ul>
+
+
+<h2>LoadBalance</h2>
+分发策略为：
+<ul>
+  <li>核心算法：BDPA
+    <ul>
+      <li>按业务的宿设置分发指针(宿太多，做hHash后设指针)</li>
+      <li>优选分发指针指向的资源，若无法获得则尽可能选择距指针最接近的资源</li>
+    </ul>
+  </li>
+  <li>目的优先：分发资源按宿均分。优先选择数据宿指向的资源
+     <ul>
+       <li>减少读出乱序和时延</li>
+       <li>缓存使用量低时，采用目的优先算法
+         <ul>
+           <li>BDPA指针指向目的MB/MBG</li>
+           <li>不更新BDPA指针</li>
+         </ul>
+       </li>
+     </ul>
+  </li>
+  <li>均衡分发：按BDPA在MBG之间均匀分发
+    <ul>
+      <li>缓存利用率高，读出有乱序</li>
+      <li>缓存使用量较高时采用均衡分发
+        <ul>
+          <li>BDPA指针按照目的RR轮询</li>
+          <li>指针更新为当前选择的下一个</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>最小优先：优先分发到使用量小的MBG/MB
+    <ul>
+      <li>尽可能不丢数据</li>
+      <li>每隔N次仲裁进行一次最小优先
+        <ul>
+          <li>N = 缓存占用量 &lt;&lt; PEROID</li>
+          <li>每隔N轮仲裁对MBG/MB进行一轮排序</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>最大可能：</li>
+</ul>
+
+<h2>环回仲裁</h2>
+<ul>
+  <li>OXB-1完成一个MBG内多个MB之间的读出冲突仲裁
+    <ul>
+      <li>采用Pipeline-EIAA仲裁算法</li>
+    </ul>
+  </li>
+  <li>OXB-2分发数据到MB</li>
+  <li>OXB-1到OXB-2之间无缓存，所以多个OXB-1仲裁必须保证OXB-2输出不冲突
+    <ul>
+      <li>多个OXB-1之间采用TDM方式选择读出总线请求</li>
+      <li>IXB-1 2x4架构:</li>
+      <li>IXB-1 4x4架构：</li>
+    </ul>
+  </li>
+</ul>
+
+<h2>Bank Selection</h2>
+<ul>
+  <li>读出优先</li>
+  <li>环回读其次</li>
+  <li>环回写和写入最后。写入策略为：
+    <ul>
+      <li>写规避读</li>
+      <li>每隔N次选择，采用一次最小优先。N = 缓存占用量 &gt;&gt; PERIOD</li>
+      <li>其它时刻采用RR</li>
+    </ul>
+  </li>
+</ul>
+
+
+
 
   </body>
 
