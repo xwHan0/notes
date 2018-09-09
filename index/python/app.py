@@ -1,4 +1,5 @@
 from flask import Flask, render_template, url_for
+from tree import TreeLeaf, TreeBranch
 
 class tree_list():
     def __init__(self,content,height=30,width=100,offset=40):
@@ -47,13 +48,26 @@ detail_components = [ \
     }
 ]
 
-tree_lists = [ \
-    tree_list("xrange").setXY(400,100)
-]
+branch = TreeBranch(
+    "",
+    TreeLeaf("apply"),
+    TreeLeaf("xrange"),
+    TreeLeaf("sort"),
+    TreeLeaf("min/max"),
+    TreeLeaf("filter"),
+    TreeLeaf("map"),
+    TreeLeaf("reduce")
+    )
+
+branch.setXY(400,100)
+
+
+
+tree_lists = branch.sub
 
 @app.route('/')
 def index():
     return render_template('index.html', items=items, detail_components=detail_components, tree_lists=tree_lists)
 
-# if __name__ == '__main__':
-#     app.run()
+if __name__ == '__main__':
+    app.run()
