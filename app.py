@@ -1,5 +1,6 @@
 from flask import Flask, render_template, url_for
 from tree import TreeLeaf, TreeBranch
+from node import BasicCell
 
 class tree_list():
     def __init__(self,content,height=30,width=100,offset=40):
@@ -15,13 +16,22 @@ class tree_list():
         return self
 
 
-app = Flask(__name__)
+
+
+app = Flask(__name__, static_folder='static')
+
+
+basic_cell = [
+    BasicCell('uri', 300, 10, 'uri/uri.html'),
+    BasicCell('json', 400, 10, ''),
+]
+
 
 items = [ \
     {'name':'Switch', 'x':100, 'y':100}, \
     {'name':'Flask', 'x':100, 'y':150, 'class':'tool'}, \
     {'name':'taskMgr', 'x':100, 'y':180, 'class':'tool'}, \
-    {'name':'xrange', 'x':200, 'y':100, 'class':'tool'} \
+    {'name':'xrange', 'x':200, 'y':100, 'class':'tool'}, \
     ]
 
 detail_components = [ \
@@ -67,7 +77,9 @@ tree_lists = branch.sub
 
 @app.route('/')
 def index():
-    return render_template('index.html', items=items, detail_components=detail_components, tree_lists=tree_lists)
+    return render_template('index.html', 
+        items=items, detail_components=detail_components, tree_lists=tree_lists,
+        basic_cell = basic_cell)
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
