@@ -1,0 +1,43 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="css/define.css" />
+</head>
+<body>
+
+<h1>Introduce</h1>
+<p>表项数据结构(表头)定义。一个表头由一个或多个域段组成。
+每个域段由以下几个子域组成：</p>
+<ul>
+<li>fieldname
+    <ul>
+    <li>默认为"f#"。#为系统在该dtype内自动从1递增</li>
+    <li>有2种格式
+        <ul>
+            <li>string: fieldname</li>
+            <li>(fieldname, titlename)</li>
+        </ul>
+    </li>
+    </ul>
+</li>
+<li>datatype</li>
+<li>shape</li>
+</ul>
+
+<h1>dtype</h1>
+<h2>constructor</h2>
+<pre>
+datatype <span class="keyword">::=</span> <span class="identity">string-format</span> <span class="keyword">|</span> <span class="identity">list-of-type</span> <span class="keyword">|</span> <span class="identity">map-of-attribute</span>
+  <span class="identity">string-format</span> <span class="keyword">::=</span> '<span class="identity">datatype</span>, ...'
+  <span class="identity">list-of-type</span> <span class="keyword">::=</span> [<span class="identity">datatype-tuple</span>,...]
+    <span class="identity">datatype-tuple</span> <span class="keyword">::=</span> (<span class="identity">fieldname</span>, <span class="identity">datatype</span>, <span class="identity">shape</span>=(1))
+      <span class="identity">fieldname</span> ::= "" | sName | (sName, sTitle)
+      <span class="identity">datatype</span> ::= "WidthType"
+      <span class="identity">shape</span> ::= (dimSize, ...)
+</pre>
+
+<h2>Attribute</h2>
+<h2>Function</h2>
+
+</body>
+</html>
