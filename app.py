@@ -1,4 +1,5 @@
 from flask import Flask, render_template, url_for
+import sqlite3
 from tree import TreeLeaf, TreeBranch
 from node import BasicCell
 
@@ -16,15 +17,21 @@ class tree_list():
         return self
 
 
+conn = sqlite3.connect('static/database/index.db3')
+c = conn.cursor()
+knowledge = c.execute('SELECT * FROM knowledge')
+# print(knowledge.fetchall())
+
+app = Flask(__name__, static_folder='static', template_folder='templates')
 
 
-app = Flask(__name__, static_folder='static')
+basic_cell = [BasicCell(k[1],k[2],k[3],k[4]) for k in knowledge]
 
 
-basic_cell = [
-    BasicCell('uri', 300, 10, 'uri/uri.html'),
-    BasicCell('json', 400, 10, ''),
-]
+# basic_cell = [
+#     BasicCell('uri', 300, 10, 'uri/uri.html'),
+#     BasicCell('json', 400, 10, ''),
+# ]
 
 
 items = [ \
@@ -80,6 +87,8 @@ def index():
     return render_template('index.html', 
         items=items, detail_components=detail_components, tree_lists=tree_lists,
         basic_cell = basic_cell)
+
+c.close()
 
 if __name__ == '__main__':
     app.run(debug=True)
