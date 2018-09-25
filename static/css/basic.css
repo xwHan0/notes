@@ -18,7 +18,7 @@ h2 {
     counter-reset: subsec;  /*重新开始子标题计数器*/
 }
 h2:before {
-    counter-increment: subsec;
+    counter-increment: section;
     content: counter(chapter)"."counter(section)" "
 }
 

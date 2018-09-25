@@ -16,7 +16,9 @@
 from flask import Flask,request,url_for,session,rediect    #<a href="import">导入相关类</a>
     
 <div class="codeStep"># 2.Instance a Flask</div>
-app = Flask(__name__, )    #<a href="instance">实例化主类</a>
+app = Flask(__name__,
+  static_folder='static',
+  Template_folder='templates')    #<a href="instance">实例化主类</a>
     
 <div class="codeStep"># 3.Cinfigure</div>
 app.config =     #<a href="#config">配置</a>
@@ -36,7 +38,7 @@ def index():
     
 <div class="codeStep"># 5.启动服务器，运行程序</div>
 if __name__ == '__main__':
-    app.run(...)    #<a href="run">运行实例</a>
+    app.run(debug=True)    #<a href="run">运行实例</a>
 </pre>
    
 </div>
