@@ -28,11 +28,6 @@ app = Flask(__name__, static_folder='static', template_folder='templates')
 basic_cell = [BasicCell(k[1],k[2],k[3],k[4]) for k in knowledge]
 
 
-# basic_cell = [
-#     BasicCell('uri', 300, 10, 'uri/uri.html'),
-#     BasicCell('json', 400, 10, ''),
-# ]
-
 
 items = [ \
     {'name':'Switch', 'x':100, 'y':100}, \

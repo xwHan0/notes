@@ -1,0 +1,18 @@
+
+.doc > rect {
+    fill: antiquewhite;
+}
+
+div.code {
+    border: 1px solid #000000;
+}
+    
+div.codeTitle {
+    color: green;
+    border-bottom: 1px solid #000000;
+    background-color: yellow;
+}
+
+div.codeStep {
+    background-color: #DDDDDD;
+}

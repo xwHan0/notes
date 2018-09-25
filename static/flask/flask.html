@@ -1,0 +1,137 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../css/basic.css" />
+<link rel="stylesheet" href="../css/code.css" />
+</head>
+<body>
+
+<h1>Tutorial</h1>
+<div class="code">
+<div class="codeTitle">appName/__init__.py - Package主文件</div>
+<div>
+
+<pre>
+<div class="codeStep"># 1.导入相关库</div>
+from flask import Flask,request,url_for,session,rediect    #<a href="import">导入相关类</a>
+    
+<div class="codeStep"># 2.Instance a Flask</div>
+app = Flask(__name__, )    #<a href="instance">实例化主类</a>
+    
+<div class="codeStep"># 3.Cinfigure</div>
+app.config =     #<a href="#config">配置</a>
+
+        
+<div class="codeStep"># 4.Router Process
+# 路由基本处理组件：<a href='router'>router</a>, <a href='blueprint'>blueprint</a>
+# 路由处理过程可能涉及到HTTP组件：<a href='#request'>HTTP请求</a>、<a href='#response'>HTTP应答</a>、<a href='#session'>HTTP Session</a>、<a href='#redirect'>重定向</a>
+# 以及辅助处理: <a href='url_for'>url_for</a></div>
+@app.route('/login', method=["POST", "GET"])    #<a href="#router">路由处理</a>
+def index():
+    if request.method == 'POST':    #<a href="#request">请求判断</a>
+        request.form["username"]...
+        return ...
+    else
+        return "hello,world!"
+    
+<div class="codeStep"># 5.启动服务器，运行程序</div>
+if __name__ == '__main__':
+    app.run(...)    #<a href="run">运行实例</a>
+</pre>
+   
+</div>
+</div>
+
+<h1>Usage</h1>
+
+<h2 name="config">Config</h2>
+<p>配置class。</p>
+<p>提供如下的基本配置方法</p>
+<ul>
+    <li>函数配置：直接解析key:val对
+        <ul>
+            <li>Syntax: config.from_mapping(key0=val0,...,keyN=valN)</li>
+        </ul>
+    </li>
+    <li>文件配置：读取文件配置项
+        <ul>
+            <li>Syntax: config.from_file(fileName, slience=False)</li>
+        </ul>
+    </li>
+    <li>
+        <ul>
+            <li>Syntax: config.from_object()</li>
+        </ul>
+    </li>
+    <li>直接访问
+        <ul>
+            <li>Syntax：config[strKey]=val</li>
+        </ul>
+    </li>
+</ul>
+
+<h2><a name="request">Request</a></h2>
+<p>HTTP请求对象</p>
+<ul>
+    <li>method:请求的HTTP方法。取值为：
+      <ul>
+        <li>"GET": </li>
+        <li>"POST": </li>
+        <li>"PUT": </li>
+        <li>"DELETE": </li>
+      </ul>
+    </li>
+</ul>
+
+<h2><a name='session'>Session</a></h2>
+<ul>
+  <li>Access (Read and Write)
+    <ul>
+      <li>[key]: Access element</li>
+      <li>get(key)</li>
+    </ul>
+  </li>
+  <li>clear(): 清空</li>
+</ul>
+  
+<h2><a name='redirect'>Redirect</a></h2>
+<p>Syntax: strResp redirect(url)</p>
+
+<h2>BluePrint</h2>
+<div class="code">
+<div class="codeTitle">
+appName/admin.py - 
+</div>
+<div>
+<pre>
+from flask import Blueprint
+
+admin = Blueprint('admin', __name__)
+
+@admin.route('/login/')
+def admin_login():
+    pass      
+
+@admin.route('/page/')
+def admin_pages():
+    pass  
+</pre>
+</div>
+</div>
+<p>主路由文件修改为：</p>
+<div class="code">
+<div class="codeTitle">
+appName/router.py - 主路由文件
+</div>
+<div>
+<pre>
+......
+from . import admin  #导入子路由库
+app.register_blueprint(admin, url_prefix='/admin')    #注册子路由 
+......
+</pre>
+</div>
+</div>
+
+</body>
+</html>
