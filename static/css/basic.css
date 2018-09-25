@@ -35,32 +35,3 @@ h4 {
     /* border-bottom: 1px solid #000000; */
 } 
 
-.doc > rect {
-    fill: antiquewhite;
-}
-
-.doc > text {
-    font-weight: bold;
-}
-
-.tool > rect {
-    fill: blue;
-    stroke: white;
-}
-
-.tool > text {
-    font-weight: bold;
-    fill:white;
-}
-
-.comment > rect {
-    fill:white;
-}
-
-.comment > text {
-    font-size: 0.7rem;
-}
-
-.tree_list > rect {
-    fill: whitesmoke;
-}
