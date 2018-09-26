@@ -25,7 +25,7 @@ knowledge = c.execute('SELECT * FROM knowledge')
 app = Flask(__name__, static_folder='static', template_folder='templates')
 
 
-basic_cell = [BasicCell(k[1],k[2],k[3],k[4]) for k in knowledge]
+basic_cell = [BasicCell(k['name'],k['x'],k['y'],k['href'],k['style']) for k in knowledge]
 
 
 
