@@ -18,14 +18,14 @@ class tree_list():
 
 
 conn = sqlite3.connect('static/database/index.db3')
+conn.row_factory = sqlite3.Row
 c = conn.cursor()
-knowledge = c.execute('SELECT * FROM knowledge')
-# print(knowledge.fetchall())
+c.execute('SELECT * FROM knowledge')
 
 app = Flask(__name__, static_folder='static', template_folder='templates')
 
 
-basic_cell = [BasicCell(k['name'],k['x'],k['y'],k['href'],k['style']) for k in knowledge]
+basic_cell = [BasicCell(k['name'],k['x'],k['y'],k['href'],k['style']) for k in c]
 
 
 
