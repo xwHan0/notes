@@ -1,0 +1,89 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../css/basic.css" />
+<link rel="stylesheet" href="../css/define.css" />
+</head>
+<body>
+
+<h1>Introduce</h1>
+
+<h2>Content</h2>
+<h5>Syntax</h5>
+<pre>
+    uri<span class="keyword"> ::= [</span><span class="identity">scheme</span><span class="keyword">][</span><span class="identity">driver</span><span class="keyword">][</span><span class="identity">path</span><span class="keyword">][</span><span class="identity">file</span><span class="keyword">][</span><span class="identity">ext</span><span class="keyword">][</span><span class="identity">query</span><span class="keyword">]</span>
+</pre>
+<p>一个URI由以下可选部分组成。</p>
+
+<h3>scheme</h3>
+<p>访问协议</p>
+<h5>Syntax</h5>
+<pre>
+    <span class="identity">scheme</span> <span class="keyword">::=</span> <span class="identity">scheme_name</span>:
+</pre>
+<p>常用的协议(scheme_name)有：</p>
+<ul>
+    <li>file: 文件(缺省)</li>
+    <li>http: HTTP协议</li>
+    <li>ftp: FTP协议</li>
+    <li>sqlite: SQLITE数据库</li>
+</ul>
+
+<p>NOTES： ":memory:"表示内存。</p>
+
+<h3>driver</h3>
+<p>Windows驱动器盘符</p>
+<h5>Syntax</h5>
+<pre>
+    <span class="identity">driver</span> <span class="keyword">::= [</span>a-zA-Z<span class="keyword">]</span>:
+</pre>
+<p>Letter为a-z或者A-Z的字符。在Windows下缺省表示当前盘符。</p>
+
+<h3>root</h3>
+<p>根目录</p>
+<h5>Syntax</h5>
+<pre>
+    <span class="identity">root</span> <span class="keyword">::= [</span>\/<span class="keyword">]</span>
+</pre>
+<p>Linux下为'/'，Windows下为'\'。缺省表示相对当前目录的相对路径(见direction小节)。</p>
+
+<h3>direction</h3>
+<p>目录</p>
+<h5>Syntax</h5>
+<pre>
+    <span class="identity">direction</span> <span class="keyword">::= ([</span>\w .<span class="keyword">]+[</span>/<span class="keyword">]?)+</span>
+</pre>
+<p>特别的目录标识</p>
+<ul>
+    <li>'.': 当前目录</li>
+    <li>'..': 父目录</li>
+    <li>'...': 祖目录</li>
+</ul>
+
+<h3>file</h3>
+<p>文件</p>
+<h5>Syntax</h5>
+<pre>
+    <span class="identity">file</span> <span class="keyword">::= [</span>\w .<span class="keyword">]+</span>
+</pre>
+
+<h3>ext</h3>
+<p>文件扩展</p>
+<h5>Syntax</h5>
+<pre>
+    <span class="identity">ext</span> <span class="keyword">::= [</span>\w<span class="keyword">]+</span>
+</pre>
+
+<h3>query</h3>
+<p>参数</p>
+<h5>Syntax</h5>
+<pre>
+query <span class="keyword">::=</span> ?<span class="identity">query-form</span>&<span class="identity">query-form</span>...
+<span class="identity">query-form</span> <span class="keyword">::=</span> query-key<span class="keyword">[</span>=query-jsonlike-value<span class="keyword">]</span>
+</pre>
+<ul>
+    <li>query-jsonlink-value: JSON格式的查询值。若忽略，则query-key为Boolean变量，且其值为True</li>
+</ul>
+
+</body>
+</html>
