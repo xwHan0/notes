@@ -1,0 +1,68 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="{{url_for('static', filename='css/basic.css')}}" />
+<link rel="stylesheet" href="{{url_for('static', filename='css/index.css')}}" />
+</head>
+<body>
+
+    <svg width='1100' height='1000' 
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink">
+       
+        <defs>
+
+        </defs>
+
+        <!-- 插入BasicCell -->
+        {% for cell in basic_cell %}
+            <g id='{{cell.name}}' class='{{cell.style}}'>
+                <rect x='{{cell.x}}' y='{{cell.y}}' width='100' height='30' stroke='black' />
+                <text y='{{cell.y+20}}'>
+                    <tspan x='{{cell.x+10}}' dy=0>
+                        <a href="{{url_for('static', filename=cell.href)}}">{{cell.name}}</a>
+                    </tspan>
+                </text>
+            </g>
+        {% endfor %}
+
+        {% for item in items %}
+            <g id='{{item.name}}' class='{{item.class|default('doc')}}'>
+                <rect x='{{item.x}}' y='{{item.y}}' width='100' height='30' stroke='black' />
+                <text y='{{item.y+20}}'>
+                    <tspan x='{{item.x+10}}' dy=0>{{item.name}}</tspan>
+                </text>
+            </g>
+        {% endfor %}
+
+        {% for item in detail_components %}
+            <g id='{{item.name}}'>
+                <g class='{{item.class|default('doc')}}'>
+                    <rect x='{{item.x}}' y='{{item.y}}' width='{{item.width}}' height='30' stroke='black' />
+                    <text x='{{item.x+10}}' y='{{item.y+20}}'>{{item.name}}</text>
+                </g>
+                <g class='comment'>
+                    <rect x='{{item.x}}' y='{{item.y+30}}' width='{{item.width}}' height='{{item.height}}' stroke='black' />
+                    <text y='{{item.y+32}}'>
+                        {% for cntx in item.detail %}
+                            <tspan x='{{item.x+3}}' dy='15' style="font-weight: bold;"> [{{cntx.title}}] </tspan>
+                            <tspan x='{{item.x+3}}' dy='15' > &nbsp;&nbsp;&nbsp;&nbsp; {{cntx.content}}</tspan>
+                        {% endfor %}
+                    </text>
+                </g>
+            </g>
+        {% endfor %}
+
+        {% for item in tree_lists %}
+            <g id='{{item.content}}' class='{{item.style}}'>
+                <line x1='{{item.x}}' y1='{{item.y}}' x2='{{item.x}}' y2='{{item.y+item.height}}' style="stroke:rgb(0,0,0);stroke-width:1" />
+                <line x1='{{item.x}}' y1='{{item.y + (item.height/2)}}' x2='{{item.x+item.offset}}' y2='{{item.y+(item.height/2)}}' style="stroke:rgb(0,0,0);stroke-width:1" />
+                <rect x='{{item.x+item.offset}}' y='{{item.y}}' width='{{item.width}}' height='{{item.height}}' stroke='black' />
+                <text x='{{item.x+item.offset+5}}' y='{{item.y+20}}'>{{item.content}}</text>
+            </g>
+        {% endfor %}
+        
+    </svg>
+
+</body>
+</html>

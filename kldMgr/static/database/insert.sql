@@ -1,0 +1,1 @@
+INSERT INTO knowledge(name,x,y,href) VALUES ("json", 200, 50, "json/json.html")
