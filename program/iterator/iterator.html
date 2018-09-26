@@ -1,0 +1,30 @@
+<html>
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+
+<h1>Background</h1>
+<p>OOP中存在各种各样的数据结构，每种结构的实现不尽相同。若数据结构是一个集合类型，则遍历其中的元素就是一个基本操作。</p>
+<p>iterator为这种元素遍历提供了一个统一的基本</p>
+<ul>
+  <li>现有的代码可能都是基于父类来定义的。所以每次需要使用新方法时，一般是先转换父类实例到子类，然后调用方法，最后再依据情况看是否还需要转回去。处理起来比较啰嗦。</li>
+  <li></li>
+</ul>
+<p>隐式类型转换就是依靠编译器来实现从使用者角度看的自动的类型转换。本质上，这种转换不仅用于父类转子类，它可以用于所有需要类型转换的地方。</p>
+
+<h1>Usage</h1>
+<h2>Syntax<h2>
+<pre>
+implicit def translate-func: new-type (obj: old-type);
+</pre>
+<h2>Process</h2>
+<p>当在使用new-type数据的地方没有找到new-type类型，则编译器开始查找是否有定义为输出new-type并且输入为old-type的隐式类型转换函数。若有则执行该转换。（若查到多个则上报中断）</p>
+<p>基本协议接口：</p>
+<ul>
+<li>begin()</li>
+<li>next()</li>
+</ul>
+
+</body>
+</html>
