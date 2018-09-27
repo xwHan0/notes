@@ -23,6 +23,19 @@
                         <a href="{{url_for('static', filename=cell.href)}}">{{cell.name}}</a>
                     </tspan>
                 </text>
+                <g id='{{cell.name}}_detail' class="comment">
+                    <rect x='{{cell.x}}' y='{{cell.y+cell.height}}' width='300' height='500' stroke='black' />
+                    <text y='{{cell.y+cell.height+2}}'>
+                    {% for b in cell.subs %}
+                        <tspan x='{{cell.x+3}}' dy='15'>[{{b.name}}]</tspan>
+                        <tspan x='{{cell.x+3}}' dy='15'>
+                        {% for c in b.subs %}
+                            | c.name 
+                        {% endfor %}
+                        </tspan>
+                    {% endfor %}
+                    </text>
+                </g>
             </g>
         {% endfor %}
 
