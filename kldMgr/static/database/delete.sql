@@ -1,0 +1,1 @@
+DELETE FROM knowledge WHERE name="for"
