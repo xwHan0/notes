@@ -17,6 +17,10 @@
     fill:white;
 }
 
+.comment {
+    display: none;
+}
+
 .comment > rect {
     fill:white;
 }

@@ -23,7 +23,6 @@
         <g id='{{cell.name}}_title' class='{{cell.style}}'>
         <title>{{cell.title}}</title>
         <rect x='{{cell.x}}' y='{{cell.y}}' width='100' height='30' stroke='black' />
-        <image xlink:href="{{url_for('static', filename='img/expand.jpg')}}" x="{{cell.x+1}}" y="{{cell.y+8}}" width="14" height="14"/>
         <text y='{{cell.y+20}}'>
             <tspan x='{{cell.x+16}}' dy=0>
                 <a href="{{url_for('static', filename=cell.href|e)}}">{{cell.name}}</a>
@@ -31,6 +30,7 @@
         </text>
         </g>
         {% if cell.subs is not none %}
+        <image xlink:href="{{url_for('static', filename='img/expand.jpg')}}" x="{{cell.x+1}}" y="{{cell.y+8}}" width="14" height="14"/>
         <g id='{{cell.name}}_detail' class="comment">
             <rect x='{{cell.x}}' y='{{cell.y+cell.height}}' width='300' height='500' stroke='black' />
             <text y='{{cell.y+cell.height+2}}'>
