@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="{{url_for('static', filename='css/basic.css')}}" />
 <link rel="stylesheet" href="{{url_for('static', filename='css/index.css')}}" />
 <script src="{{url_for('static', filename='js/jquery-3.3.1.min.js')}}"></script>
-<script src="{{url_for('static', filename='js/index.main.js')}}"></script>
+<script src="{{url_for('static', filename='js/index_main.js')}}"></script>
 
 </head>
 <body>
@@ -23,9 +23,9 @@
         <g id='{{cell.name}}_title' class='{{cell.style}}'>
         <title>{{cell.title}}</title>
         <rect x='{{cell.x}}' y='{{cell.y}}' width='100' height='30' stroke='black' />
-        <embed src="{{url_for('static', filename='img/expand.jpg')}}" />
+        <image xlink:href="{{url_for('static', filename='img/expand.jpg')}}" x="{{cell.x+1}}" y="{{cell.y+8}}" width="14" height="14"/>
         <text y='{{cell.y+20}}'>
-            <tspan x='{{cell.x+10}}' dy=0>
+            <tspan x='{{cell.x+16}}' dy=0>
                 <a href="{{url_for('static', filename=cell.href|e)}}">{{cell.name}}</a>
             </tspan>
         </text>
