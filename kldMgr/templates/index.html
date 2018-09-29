@@ -20,6 +20,7 @@
         <g id='{{cell.name}}_title' class='{{cell.style}}'>
         <title>{{cell.title}}</title>
         <rect x='{{cell.x}}' y='{{cell.y}}' width='100' height='30' stroke='black' />
+        <embed src="{{url_for('static', filename='img/expand.jpg')}}" />
         <text y='{{cell.y+20}}'>
             <tspan x='{{cell.x+10}}' dy=0>
                 <a href="{{url_for('static', filename=cell.href|e)}}">{{cell.name}}</a>

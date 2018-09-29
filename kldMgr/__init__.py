@@ -10,8 +10,7 @@ basic_cell = read_cell()
 @app.route('/')
 def index():
     return render_template('index.html', 
-        items=items, detail_components=detail_components, tree_lists=tree_lists,
-        basic_cell = basic_cell)
+         basic_cell = basic_cell)
 
 
 if __name__ == '__main__':
