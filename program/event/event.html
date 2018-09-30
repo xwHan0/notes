@@ -8,7 +8,11 @@
 
 <h1>Introduce</h1>
 
-<h2>Content</h2>
+<h2>Brive</h2>
+
+<h2>Event</h2>
+
+
 <p>一个URI由以下可选部分组成。</p>
 <h5>Syntax</h5>
 <pre>
@@ -83,6 +87,20 @@ query <span class="keyword">::=</span> ?<span class="identity">query-form</span>
 <ul>
     <li>query-jsonlink-value: JSON格式的查询值。若忽略，则query-key为Boolean变量，且其值为True</li>
 </ul>
+
+
+<h2>Bind</h2>
+<h3>Bind</h3>
+<p>事件绑定DOM</p>
+<h5>Syntax</h5>
+<pre>
+    $(dom).on(
+        "<span class="keyword">(</span><span class="identity">strEvent</span> <span class="keyword">)+</span>": function(e){...},
+        "<span class="keyword">(</span><span class="identity">strEvent</span> <span class="keyword">)+</span>": function(e){...},
+        <span class="keyword">......</span>
+        "<span class="keyword">(</span><span class="identity">strEvent</span> <span class="keyword">)+</span>": function(e){...}
+    )
+</pre>
 
 </body>
 </html>
