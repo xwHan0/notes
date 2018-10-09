@@ -1,5 +1,5 @@
 import sqlite3
-from kldMgr.node import *
+from kldMgr.data.node import *
 
 def read_cell():
 
@@ -8,12 +8,11 @@ def read_cell():
     items = conn.execute('SELECT * FROM knowledge')
 
     rst = []
-    lastCell = BasicCell()  # 设置初始Cell
+    last_cell = BasicCell()  # 设置初始Cell
     for item in items:
         cell = BasicCell(
             name = item['name'],
             href = item['href'],
-            title = item['title'],
             style = item['style'],
             ofstx = item['x'],
             ofsty = item['y'],
@@ -28,9 +27,9 @@ def read_cell():
             content = conn.execute('SELECT * FROM detail WHERE parent=? AND lvl=?', (key1,2))
             b.subs = [BasicBrach(name=c['name'], href=c['href']) for c in content]
             cell.subs.append(b)
-         cell.subs = cell.subs if cell.subs != [] else None
-         last_cell = cell
-         rst.append(cell)
+        cell.subs = cell.subs if cell.subs != [] else None
+        last_cell = cell
+        rst.append(cell)
        
     conn.close()
     

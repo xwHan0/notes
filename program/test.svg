@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="statement" 
+     xmlns="http://www.w3.org/2000/svg" 
+     xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 width="205" height="405">
+
+<defs>
+    
+    <marker id="arrow" 
+     markerWidth="4" markerHeight="4" 
+     refX="0" refY="0" orient="auto-start-reverse" 
+     markerUnits="strokeWidth" 
+     viewBox="-2,-2,5,5"> 
+        <path d="M0,0 L-2,-2 L3,0 L-2,2 z" fill="#000" /> 
+    </marker>
+    
+    <marker id="input_common" 
+     markerWidth="4" markerHeight="4" 
+     refX="0" refY="0" 
+     markerUnits="strokeWidth" 
+     viewBox="0,-2,3,5"> 
+        <path d="M0,0 L0,-2 L3,0 L0,2 z" fill="#000" /> 
+    </marker>
+        
+    <marker id="input_list" 
+     markerWidth="4" markerHeight="4" 
+     refX="0" refY="0" 
+     markerUnits="strokeWidth" 
+     viewBox="0,0,6,5"> 
+        <line x1="0" y1="-2" x2="0" y2="2" stroke="black" />
+        <path d="M3,0 L3,-2 L6,0 L0,2 z" fill="#000" /> 
+    </marker>
+       
+    <marker id="input_map" 
+     markerWidth="4" markerHeight="4" 
+     refX="0" refY="0" 
+     markerUnits="strokeWidth" 
+     viewBox="0,0,9,5"> 
+        <line x1="0" y1="-2" x2="0" y2="2" stroke="black" />
+        <line x1="3" y1="-2" x2="3" y2="2" stroke="black" />
+        <path d="M6,0 L6,-2 L9,0 L6,2 z" fill="#000" /> 
+    </marker>
+    
+    <g id="start">
+        <ellipse cx="30" cy="10" rx="30" ry="10" style="fill:white; stroke:rgb(0,0,0);stroke-width:0.05rem"/>
+        <text x="5" y="15">
+            start
+        </text>
+    </g>
+    
+    <g id="process">
+        <rect x="0" y="0" width="60" height="20" fill="rgb(255,255,255)" stroke="black" />
+        <text x="3" y="15">process</text>
+    </g>
+    
+    <g id="condition">
+        <path d="M30,0 L60,10 L30,20 L0,10 z" fill="#FFFFFF" stroke="black" /> 
+        <text x="20" y="15">if</text>
+    </g>
+    
+    <g id="return">
+        <ellipse cx="30" cy="10" rx="30" ry="10" style="fill:white; stroke:rgb(0,0,0);stroke-width:0.05rem"/>
+        <ellipse cx="30" cy="10" rx="28" ry="9" style="fill:white; stroke:rgb(0,0,0);stroke-width:0.05rem"/>
+        <text x="10" y="15">return</text>
+    </g>
+  
+    <g id="loop_st">
+        <path d="M10,0 L50,0 L60,5 L60,20 L0,20 L0,5 z" fill="#FFFFFF" stroke="black" /> 
+        <text x="10" y="15">loop</text>
+    </g>
+    <g id="loop_ed">
+        <path d="M0,0 L60,0 L60,15 L50,20 L10,20 L0,15 z" fill="#FFFFFF" stroke="black" /> 
+        <text x="10" y="15">loop</text>
+    </g>
+    
+    <g id="exception">
+        <path d="M0,0 L50,0 L60,10 L50,20 L0,20 z" fill="#FFFFFF" stroke="black" /> 
+        <text x="3" y="15">excep</text>
+    </g>
+    
+</defs>
+
+<use x="50" y="30" xlink:href="#start" />
+
+<use x="100" y="100" width="200" height="500" xlink:href="statement/svg/index.svg#statement" />
+
+</svg>
+
