@@ -21,7 +21,7 @@
     {% for cell in basic_cell %}
     <g id='{{cell.name}}' class='{{cell.style}}'>
         {% if cell.svg is not none %}
-            <embed x='{{cell.x}}' y='{{cell.y}}' xlink:href='{{cell.svg}}'/>
+            <use x='{{cell.x}}' y='{{cell.y}}' xlink:href="{{url_for('static', filename='cell.svg')}}"/>
         {% else %}
         <title>{{cell.title}}</title>
         <rect x='{{cell.x}}' y='{{cell.y}}' width='100' height='30' stroke='black' />
