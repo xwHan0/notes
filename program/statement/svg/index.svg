@@ -81,7 +81,10 @@
 </defs>
 
 <rect x="3" y="3" width="200" height="400" stroke="black" fill="white" stroke-width="0.1rem" />
-<text x="10" y="20">statement</text>
+<text x="10" y="20">
+    <title>计算机语句。程序员通过这些特殊定义的语句来控制计算机程序的执行跳转过程。</title>
+    statement
+</text>
 
 <!-- start -->
 <use x="50" y="30" xlink:href="#start" />

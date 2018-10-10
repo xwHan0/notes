@@ -16,6 +16,8 @@ def read_cell():
             style = item['style'],
             ofstx = item['x'],
             ofsty = item['y'],
+            width = item['width'],
+            height = item['height'],
             svg = item['svg'],
             refcell = last_cell
         )
