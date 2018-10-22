@@ -1,0 +1,49 @@
+<html>
+<head>
+<meta charset="UTF-8"/>
+<link rel="stylesheet" type="text/css" href="css/syntax.css"/>
+</head>
+<body>
+
+<h1>Introduce</h1>
+
+<h1>Data Structure</h1>
+<h2>Pointer Solution</h2>
+<h2>Array Solution</h2>
+
+<h1>Method</h1>
+<h2>Access</h2>
+<h2>Enumerate</h2>
+<h3>深度优先</h3>
+
+<pre>
+function deep_reduce(
+  node,  // 树节点
+  idx = [],  // 节点序号，默认根节点
+  init = None,  // 最终返回结果
+  pre_proc = None, // 迭代子节点前处理函数
+  post_proc = None,  // 迭代子节点后处理函数
+):
+  // 处理当前节点。深度父优先
+  if pre_proc:
+    rst = pre_proc(node, idx, init)
+  else:
+    rst = init
+  
+  // 迭代子节点。叶子节点node.sub为空
+  for i, sub in node.sub:
+    rst = recur( sub, idx.push(i), rst )
+    
+  rst = POST_PROCESS(node, idx, rst)
+  
+  // 返回结果
+  return rst
+</pre>
+
+<h3>宽度优先</h3>
+<h2>Transform</h2>
+<h3>flatten</h3>
+
+
+</body>
+</html>

@@ -21,7 +21,7 @@
     {% for cell in basic_cell %}
     <g id='{{cell.name}}' class='{{cell.style}}'>
         {% if cell.svg is not none %}
-            <use x='{{cell.x}}' y='{{cell.y}}' xlink:href='{{"static" ~ cell.svg}}'/>
+            <use x='{{cell.x}}' y='{{cell.y}}' xlink:href='{{"static/" ~ cell.svg}}'/>
         {% else %}
         <title>{{cell.title}}</title>
         <rect x='{{cell.x}}' y='{{cell.y}}' width='100' height='30' stroke='black' />
