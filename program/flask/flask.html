@@ -12,17 +12,23 @@
 <div>
 
 <pre>
-<div class="codeStep"># 1.导入相关库</div>
+<div class="codeStep"># 1.1 导入flask主库</div>
 from flask import Flask,request,url_for,session,rediect    #<a href="import">导入相关类</a>
+    
+<div class="codeStep"># 1.2 导入扩展</div>
+from flask-sqlalchemy import SQLAlchemy    #<a href="import">导入相关类</a>
     
 <div class="codeStep"># 2.Instance a Flask</div>
 app = Flask(__name__,
   static_folder='static',
   Template_folder='templates')    #<a href="instance">实例化主类</a>
     
-<div class="codeStep"># 3.Cinfigure</div>
+<div class="codeStep"># 3 Configure Flask并设置扩展参数</div>
 app.config =     #<a href="#config">配置</a>
 
+<div class="codeStep"># 3.1 启动扩展，创建全局变量</div>
+app.config =     #<a href="#config">配置</a>
+db = SQLAlchemy(app)
         
 <div class="codeStep"># 4.Router Process
 # 路由基本处理组件：<a href='router'>router</a>, <a href='blueprint'>blueprint</a>
@@ -62,7 +68,11 @@ if __name__ == '__main__':
     </li>
     <li>
         <ul>
-            <li>Syntax: config.from_object()</li>
+            <li>Syntax: config.from_object(obj)
+            <ul>
+              <li>obj为普通定义的data class。其各个域作为设置</li>
+            </ul>
+            </li>
         </ul>
     </li>
     <li>直接访问
