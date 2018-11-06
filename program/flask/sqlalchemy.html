@@ -1,0 +1,104 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../css/basic.css" />
+<link rel="stylesheet" href="../css/code.css" />
+</head>
+<body>
+
+<h1>Tutorial</h1>
+<div class="code">
+<div class="codeTitle">appName/model.py - Package主文件</div>
+<div>
+
+<pre>
+<div class="codeStep"># 1.1 导入flask主库</div>
+from flask import Flask,request,url_for,session,rediect    #<a href="import">导入相关类</a>
+    
+<div class="codeStep"># 1.2 导入数据库类</div>
+from xxx import db    #<a href="import">导入相关类</a>
+    
+<div class="codeStep"># 2 定义表格类</div>
+class User(db.Model):    # 必须为db.Model子类
+    
+    
+<div class="codeStep"># 3 数据表名定义</div>
+    __tablename__ = 'user'  # 连接的数据库表名称
+    
+    
+<div class="codeStep"># 4 定义数据表域段对应属性</div>
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(255), nullable=False)
+    description = db.Column(db.String)
+    date = db.Column(db.Date)
+        
+<div class="codeStep"># 5 定义数据表连接域段</div>
+    classid = db.Column(db.Integer, ForeignKey('class.id'))
+    
+<div class="codeStep"># 6 定义数据表<a href='#relationship'>连接</a>域段</div>
+    children = db.relationship(
+        'User', # 链接数据表名称字符串或者数据表类名
+        ForeignKey('class.id'))
+
+
+<div class="codeStep"># 4.Router Process
+# 路由基本处理组件：<a href='router'>router</a>, <a href='blueprint'>blueprint</a>
+# 路由处理过程可能涉及到HTTP组件：<a href='#request'>HTTP请求</a>、<a href='#response'>HTTP应答</a>、<a href='#session'>HTTP Session</a>、<a href='#redirect'>重定向</a>
+# 以及辅助处理: <a href='url_for'>url_for</a></div>
+@app.route('/login', method=["POST", "GET"])    #<a href="#router">路由处理</a>
+def index():
+    if request.method == 'POST':    #<a href="#request">请求判断</a>
+        request.form["username"]...
+        return ...
+    else
+        return "hello,world!"
+    
+<div class="codeStep"># 5.启动服务器，运行程序</div>
+if __name__ == '__main__':
+    app.run(debug=True, port=5001)    #<a href="run">运行实例</a>
+</pre>
+   
+</div>
+</div>
+
+<h1>Usage</h1>
+
+<h2 name="relationship">relationship</h2>
+<p>定义数据表内对其它表的引用</p>
+
+<h3>Argument</h3>
+<h4>foreign_keys</h4>
+<p>Foreign关键字指示字符串或者包含关键字的字符串列表。例如：'[User.classid,Class.id]'表示使用User数据表类的classid作为该relationship的连接关键字。</p>
+<p>不指定该关键字时，使用relationClass中定义的指向当前数据表类的域段作为链接关键字。</p>
+
+<h4>primaryjoin</h4>
+<p>JOIN语句的ON条件字符串。例如：'User.id==Class.uid'。
+该语句转化为SQL为：</p>
+<pre>
+SELECT ... FROM ... 
+INNER JOIN {链接数据表名} ON {primaryjoin}
+</pre>
+<p>可以使用SQLAlchemy定义的逻辑函数and_, or_等。</p>
+
+<h4>secondaryjoin</h4>
+
+<h4>backref</h4>
+<p>反向引用名定义字符串，或者backref函数</p>
+<p>在</p>
+<p>backref函数的参数定义</p>
+<ul>
+  <li>[first]: 反向链接域段名</li>
+  <li>order_by: 排序域段。例如：Class.id</li>
+</ul>
+
+<h4>order_by</h4>
+  
+<h4>lazy</h4>
+<p>引用方式定义</p>
+<ul>
+  <li>'dynamic'</li>
+  <li></li>
+</ul>
+ 
+</body>
+</html>

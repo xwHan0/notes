@@ -44,7 +44,7 @@ def index():
     
 <div class="codeStep"># 5.启动服务器，运行程序</div>
 if __name__ == '__main__':
-    app.run(debug=True, port=5001)    #<a href="run">运行实例</a>
+    app.run(debug=True, host='192.0.0.1', port=5001)    #<a href="run">运行实例</a>
 </pre>
    
 </div>
@@ -144,6 +144,15 @@ app.register_blueprint(admin, url_prefix='/admin')    #注册子路由
 </pre>
 </div>
 </div>
+
+<h1>扩展</h1>
+<ul>
+  <li>数据库
+    <ul>
+      <li>ORM: <a href='sqlalchemy.html'>flask-SQLAlchemy</a></li>
+    </ul>
+  </li>
+</ul>
 
 </body>
 </html>
