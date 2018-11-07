@@ -1,0 +1,38 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../css/basic.css" />
+<link rel="stylesheet" href="../css/code.css" />
+</head>
+<body>
+
+<h1>Tutorial</h1>
+
+<p>多表联合查找。</p>
+<h4>Syntax<h4>
+<pre>
+SELECT ... FROM tblA
+JOIN-TYP tblB ON join-predA
+JOIN-TYP tblC ON join-predB
+...
+JOIN-TYP tblZ ON join-predZ
+other-select-statement
+</pre>
+
+<p>处理过程为：</p>
+<ol>
+  <li>枚举tblA中的表项a</li>
+  <li>按照join-predA条件在tblB中寻找匹配的项</li>
+  <li>若找到，则进行JOIN成功操作</li>
+  <li>若没有找到，则进行JOIN失败操作</li>
+  <li>枚举下一个a</li>
+<ol>
+  
+<h1>JOIN类型<h1>
+<h2>INNER JOIN<h2>
+<h2>OUTER JOIN LEFT</h2>
+<h2>OUTER JOIN RIGHT</h2>
+<h2>CORSS JOIN</h2>
+
+</body>
+</html>
