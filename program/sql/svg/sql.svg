@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="sql" 
+     xmlns="http://www.w3.org/2000/svg" 
+     xmlns:xlink="http://www.w3.org/1999/xlink"  
+     width="205" height="165">
+
+<defs>
+    
+</defs>
+
+<rect x="0" y="0" width="200" height="160" stroke="black" fill="white" stroke-width="0.1rem" />
+<text x="10" y="0">
+
+    <tspan x='10' dy='20'>SELECT </tspan>
+    <tspan class='identity'>fields</tspan>
+    
+    <tspan x='10' dy='15'>FROM </tspan>
+    <tspan class='identity'>tbl</tspan>
+    
+    <tspan x='10' dy='15' class='syntax'>[</tspan>
+    <tspan class='keyword'><a href='../join.html'>JOIN</a></tspan>
+    <tspan class='identity'>tblX </tspan>
+    <tspan class='keyword'>ON </tspan>
+    <tspan class='identity'>join-criteria</tspan>
+    <tspan class='syntax'>]*</tspan>
+    
+    <tspan x='10' dy='15' class='syntax'>[</tspan>
+    <tspan class='keyword'>WHERE </tspan>
+    <tspan class='identity'>condition-criteria </tspan>
+    <tspan class='syntax'>]</tspan>
+
+    <tspan x='10' dy='15' class='syntax'>[</tspan>
+    <tspan class='keyword'>GROUP BY </tspan>
+    <tspan class='identity'>condition-criteria </tspan>
+    <tspan class='syntax'>]</tspan>
+
+    <tspan x='10' dy='15' class='syntax'>[</tspan>
+    <tspan class='keyword'>ORDER BY </tspan>
+    <tspan class='identity'>condition-criteria </tspan>
+    <tspan class='syntax'>]</tspan>
+
+    <tspan x='10' dy='15' class='syntax'>[</tspan>
+    <tspan class='keyword'>LIMMIT </tspan>
+    <tspan class='identity'>condition-criteria </tspan>
+    <tspan class='syntax'>]</tspan>
+
+</text>
+
+
+</svg>
+
