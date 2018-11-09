@@ -11,6 +11,7 @@
 <rect x="0" y="0" width="200" height="160" stroke="black" fill="white" stroke-width="0.1rem" />
 <text x="10" y="0">
 
+    <tspan x='10' dy='20' class='title'>SQL</tspan>
     <tspan x='10' dy='20'>SELECT </tspan>
     <tspan class='identity'>fields</tspan>
     
@@ -30,13 +31,25 @@
     <tspan class='syntax'>]</tspan>
 
     <tspan x='10' dy='15' class='syntax'>[</tspan>
-    <tspan class='keyword'>GROUP BY </tspan>
-    <tspan class='identity'>condition-criteria </tspan>
+    <tspan class='keyword'><a href='../group.html'>GROUP BY</a> </tspan>
+    <tspan class='syntax'>[</tspan>
+    <tspan class='keyword'>ALL</tspan>
+    <tspan class='identity'>] </tspan>
+    <tspan class='identity'>field-list </tspan>
+    <tspan class='syntax'>[</tspan>
+    <tspan class='keyword'>HAVING </tspan>
+    <tspan class='identity'>having-criteria </tspan>
+    <tspan class='syntax'>]</tspan>
     <tspan class='syntax'>]</tspan>
 
     <tspan x='10' dy='15' class='syntax'>[</tspan>
     <tspan class='keyword'>ORDER BY </tspan>
-    <tspan class='identity'>condition-criteria </tspan>
+    <tspan class='identity'>field </tspan>
+    <tspan class='syntax'>[</tspan>
+    <tspan class='identity'>ASC </tspan>
+    <tspan class='syntax'>|</tspan>
+    <tspan class='identity'>DESC</tspan>
+    <tspan class='syntax'>]</tspan>
     <tspan class='syntax'>]</tspan>
 
     <tspan x='10' dy='15' class='syntax'>[</tspan>
