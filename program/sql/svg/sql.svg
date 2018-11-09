@@ -2,13 +2,13 @@
 <svg version="1.1" id="sql" 
      xmlns="http://www.w3.org/2000/svg" 
      xmlns:xlink="http://www.w3.org/1999/xlink"  
-     width="255" height="165">
+     width="305" height="165">
 
 <defs>
     
 </defs>
 
-<rect x="0" y="0" width="200" height="250" stroke="black" fill="white" stroke-width="0.1rem" />
+<rect x="0" y="0" width="300" height="250" stroke="black" fill="white" stroke-width="0.1rem" />
 <text x="10" y="0">
 
     <tspan x='10' dy='20' class='title'>SQL</tspan>
@@ -33,7 +33,7 @@
     <tspan class='keyword'><a href='../group.html'>GROUP BY</a> </tspan>
     <tspan class='syntax'>[</tspan>
     <tspan class='keyword'>ALL</tspan>
-    <tspan class='identity'>] </tspan>
+    <tspan class='syntax'>] </tspan>
     <tspan class='identity'>field-list </tspan>
     <tspan class='syntax'>[</tspan>
     <tspan class='keyword'>HAVING </tspan>
