@@ -1,0 +1,46 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="../css/basic.css" />
+<link rel="stylesheet" href="../css/code.css" />
+</head>
+<body>
+
+<h1>Tutorial</h1>
+
+<p>多表联合查找。</p>
+<h4>Syntax</h4>
+<pre>
+SELECT ... FROM tblA
+JOIN-TYP tblB ON join-predA
+JOIN-TYP tblC ON join-predB
+...
+JOIN-TYP tblZ ON join-predZ
+other-select-statement
+</pre>
+
+<h1>Work Flow</h1>
+<ol>
+  <li>按GROUP BY字段进行联合分类</li>
+  <li>生成一个临时表,其内容为:
+  <ul>
+    <li>每个分类域段作为一列</li>
+    <li>满足该分类的所有表项"合并"成一个域段</li>
+    <li>若存在ALL关键字，不满足分类条件的项单独作为一个聚合项</li>
+  </ul>
+  </li>
+  <li>使用HAVING条件过滤临时表内容(HAVING操作临时表)</li>
+</ol>
+  
+<h1>Constraint</h1>
+<ul>
+  <li>SELECT选择的域只能为以下2种：(因为SELECT操作的是GROUP产生的临时表)
+  <ul>
+    <li>GROUP BY的分类域</li>
+    <li>聚合函数</li>
+  </ul>
+  </li>
+</ul>
+
+</body>
+</html>
