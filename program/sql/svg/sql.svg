@@ -2,16 +2,18 @@
 <svg version="1.1" id="sql" 
      xmlns="http://www.w3.org/2000/svg" 
      xmlns:xlink="http://www.w3.org/1999/xlink"  
-     width="205" height="250">
+     width="165" height="250">
 
 <defs>
     
 </defs>
 
-<ellipse cx="100" cy="190" rx="100" ry="30" stroke="black" fill="#00FF00" stroke-width="0.1rem" />
+<port x='0' y='85' />
 
-<rect x="0" y="30" width="200" height="160" stroke="black" fill="#00FF00" stroke-width="0.1rem" />
-<text x="10" y="60">
+<ellipse cx="80" cy="180" rx="80" ry="20" stroke="black" fill="#AAAAAA" stroke-width="0.1rem" />
+
+<rect x="0" y="20" width="160" height="160" stroke="none" fill="#AAAAAA" stroke-width="0.1rem" />
+<text x="10" y="40">
 
     <tspan x='10' dy='20' class='keyword'>SELECT </tspan>
     <tspan class='identity'>fields</tspan>
@@ -45,7 +47,7 @@
     <tspan x='10' dy='15' class='syntax'>[</tspan>
     <tspan class='keyword'>ORDER BY </tspan>
     <tspan class='identity'>field </tspan>
-    <tspan class='syntax'>[</tspan>
+    <tspan x='20' dy='15' class='syntax'>[</tspan>
     <tspan class='identity'>ASC</tspan>
     <tspan class='syntax'>|</tspan>
     <tspan class='identity'>DESC</tspan>
@@ -60,9 +62,11 @@
 </text>
 
 
-<line x1='0' y1='190' x2='200' y2='190' stroke='#00FF00' stroke-width="0.1rem"/>
-<ellipse cx="100" cy="30" rx="100" ry="30" stroke="black" fill="#00FF00" stroke-width="0.1rem" />
-<text x='80' y='40' class='title'>SQL</text>
+<line x1='0' y1='20' x2='0' y2='180' stroke='#AAAAAA' stroke-width="0.1rem"/>
+<line x1='160' y1='20' x2='160' y2='180' stroke='#AAAAAA' stroke-width="0.1rem"/>
+
+<ellipse cx="80" cy="20" rx="80" ry="20" stroke="black" fill="#AAAAAA" stroke-width="0.1rem" />
+<text x='60' y='30' class='title'>SQL</text>
 
 </svg>
 
