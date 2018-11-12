@@ -2,42 +2,43 @@
 <svg version="1.1" id="sql" 
      xmlns="http://www.w3.org/2000/svg" 
      xmlns:xlink="http://www.w3.org/1999/xlink"  
-     width="305" height="165">
+     width="205" height="250">
 
 <defs>
     
 </defs>
 
-<rect x="0" y="0" width="300" height="250" stroke="black" fill="white" stroke-width="0.1rem" />
-<text x="10" y="0">
+<ellipse cx="100" cy="190" rx="100" ry="30" stroke="black" fill="#00FF00" stroke-width="0.1rem" />
 
-    <tspan x='10' dy='20' class='title'>SQL</tspan>
-    <tspan x='10' dy='20'>SELECT </tspan>
+<rect x="0" y="30" width="200" height="160" stroke="black" fill="#00FF00" stroke-width="0.1rem" />
+<text x="10" y="60">
+
+    <tspan x='10' dy='20' class='keyword'>SELECT </tspan>
     <tspan class='identity'>fields</tspan>
-    <tspan>FROM </tspan>
+    <tspan class='keyword'>FROM </tspan>
     <tspan class='identity'>tbl</tspan>
     
     <tspan x='10' dy='15' class='syntax'>[</tspan>
     <tspan class='keyword'><a href='../join.html'>JOIN</a></tspan>
     <tspan class='identity'>tblX </tspan>
     <tspan class='keyword'>ON </tspan>
-    <tspan class='identity'>join-criteria</tspan>
+    <tspan class='identity'>criteria</tspan>
     <tspan class='syntax'>]*</tspan>
     
     <tspan x='10' dy='15' class='syntax'>[</tspan>
     <tspan class='keyword'>WHERE </tspan>
-    <tspan class='identity'>condition-criteria </tspan>
+    <tspan class='identity'>criteria </tspan>
     <tspan class='syntax'>]</tspan>
 
     <tspan x='10' dy='15' class='syntax'>[</tspan>
-    <tspan class='keyword'><a href='../group.html'>GROUP BY</a> </tspan>
+    <tspan class='keyword'><a href='../group.html'>GROUP BY</a></tspan>
     <tspan class='syntax'>[</tspan>
     <tspan class='keyword'>ALL</tspan>
-    <tspan class='syntax'>] </tspan>
-    <tspan class='identity'>field-list </tspan>
-    <tspan class='syntax'>[</tspan>
+    <tspan class='syntax'>]</tspan>
+    <tspan class='identity'>fields</tspan>
+    <tspan x='15' dy='15' class='syntax'>[</tspan>
     <tspan class='keyword'>HAVING </tspan>
-    <tspan class='identity'>having-criteria </tspan>
+    <tspan class='identity'>criteria</tspan>
     <tspan class='syntax'>]</tspan>
     <tspan class='syntax'>]</tspan>
 
@@ -45,7 +46,7 @@
     <tspan class='keyword'>ORDER BY </tspan>
     <tspan class='identity'>field </tspan>
     <tspan class='syntax'>[</tspan>
-    <tspan class='identity'>ASC </tspan>
+    <tspan class='identity'>ASC</tspan>
     <tspan class='syntax'>|</tspan>
     <tspan class='identity'>DESC</tspan>
     <tspan class='syntax'>]</tspan>
@@ -53,11 +54,15 @@
 
     <tspan x='10' dy='15' class='syntax'>[</tspan>
     <tspan class='keyword'>LIMMIT </tspan>
-    <tspan class='identity'>condition-criteria </tspan>
+    <tspan class='identity'>criteria </tspan>
     <tspan class='syntax'>]</tspan>
 
 </text>
 
+
+<line x1='0' y1='190' x2='200' y2='190' stroke='#00FF00' stroke-width="0.1rem"/>
+<ellipse cx="100" cy="30" rx="100" ry="30" stroke="black" fill="#00FF00" stroke-width="0.1rem" />
+<text x='80' y='40' class='title'>SQL</text>
 
 </svg>
 
