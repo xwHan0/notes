@@ -62,8 +62,8 @@
 </text>
 
 
-<line x1='0' y1='20' x2='0' y2='180' stroke='#AAAAAA' stroke-width="0.1rem"/>
-<line x1='160' y1='20' x2='160' y2='180' stroke='#AAAAAA' stroke-width="0.1rem"/>
+<line x1='0' y1='20' x2='0' y2='180' stroke='#000000' stroke-width="0.1rem"/>
+<line x1='160' y1='20' x2='160' y2='180' stroke='#000000' stroke-width="0.1rem"/>
 
 <ellipse cx="80" cy="20" rx="80" ry="20" stroke="black" fill="#AAAAAA" stroke-width="0.1rem" />
 <text x='60' y='30' class='title'>SQL</text>
