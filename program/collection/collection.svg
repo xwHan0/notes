@@ -2,7 +2,7 @@
 <svg version="1.1" id="collection" 
      xmlns="http://www.w3.org/2000/svg" 
      xmlns:xlink="http://www.w3.org/1999/xlink"  
-     width="320" height="300">
+     width="500" height="500">
 
 <defs>
 
@@ -16,14 +16,77 @@
   <text x='0' y='18'><a xlink:href='iterator'>iterator</a></text>
 </g>    
 
+<g id='BaseData'>
+  <rect x="200" y="70" width="100" height="30" stroke="black" fill="#000088" stroke-width='0.1rem' fill-opacity='0.5' />  
+  <text x='210' y='90'>BaseData</text>
+
+  <rect x="25" y="0" width="50" height="30" stroke="black" fill="#000088" stroke-width='0.1rem' fill-opacity='0.5' />  
+  <text x='30' y='20'>Map</text>
+
+  <rect x="125" y="0" width="50" height="30" stroke="black" fill="#000088" stroke-width='0.1rem' fill-opacity='0.5' />  
+  <text x='130' y='20'>Array</text>
+
+  <rect x="225" y="0" width="50" height="30" stroke="black" fill="#000088" stroke-width='0.1rem' fill-opacity='0.5' />  
+  <text x='230' y='20'>List</text>
+
+  <rect x="325" y="0" width="50" height="30" stroke="black" fill="#000088" stroke-width='0.1rem' fill-opacity='0.5' />  
+  <text x='330' y='20'>Set</text>
+
+  <rect x="425" y="0" width="50" height="30" stroke="black" fill="#000088" stroke-width='0.1rem' fill-opacity='0.5' />  
+  <text x='430' y='20'>Tuple</text>
+
+  <path d='M50,50 L450,50' stroke='black' stroke-width='0.1rem' />
+  <path d='M50,30 L50,50' stroke='black' stroke-width='0.1rem' />
+  <path d='M150,30 L150,50' stroke='black' stroke-width='0.1rem' />
+  <path d='M250,30 L250,50' stroke='black' stroke-width='0.1rem' />
+  <path d='M350,30 L350,50' stroke='black' stroke-width='0.1rem' />
+  <path d='M450,30 L450,50' stroke='black' stroke-width='0.1rem' />
+  <path d='M250,30 L250,70' stroke='black' stroke-width='0.1rem' />
+</g>
+
+<g id='CombiData'>
+  <rect x="200" y="0" width="100" height="30" stroke="black" fill="#000088" stroke-width='0.1rem' fill-opacity='0.5' />  
+  <text x='210' y='20'>CombiData</text>
+
+  <rect x="25" y="70" width="50" height="30" stroke="black" fill="#000088" stroke-width='0.1rem' fill-opacity='0.5' />  
+  <text x='30' y='90'>XML</text>
+
+  <rect x="125" y="70" width="50" height="30" stroke="black" fill="#000088" stroke-width='0.1rem' fill-opacity='0.5' />  
+  <text x='130' y='90'>JSON</text>
+  
+  <rect x="225" y="70" width="50" height="30" stroke="black" fill="#000088" stroke-width='0.1rem' fill-opacity='0.5' />  
+  <text x='230' y='90'>DOM</text>
+  
+  <rect x="325" y="70" width="50" height="30" stroke="black" fill="#000088" stroke-width='0.1rem' fill-opacity='0.5' />  
+  <text x='330' y='90'>HICCUP</text>
+  
+  <rect x="425" y="70" width="50" height="30" stroke="black" fill="#000088" stroke-width='0.1rem' fill-opacity='0.5' />  
+  <text x='430' y='90'>Tables</text>
+  
+  <path d='M50,50 L450,50' stroke='black' stroke-width='0.1rem' />
+  <path d='M50,50 L50,70' stroke='black' stroke-width='0.1rem' />
+  <path d='M150,50 L150,70' stroke='black' stroke-width='0.1rem' />
+  <path d='M250,50 L250,70' stroke='black' stroke-width='0.1rem' />
+  <path d='M350,50 L350,70' stroke='black' stroke-width='0.1rem' />
+  <path d='M450,50 L450,70' stroke='black' stroke-width='0.1rem' />
+  <path d='M250,30 L250,50' stroke='black' stroke-width='0.1rem' />
+
+</g>
+
 </defs>
 
-<ellipse cx="160" cy="120" rx="80" ry="120" stroke="black" fill="#AA0000" stroke-width='0.1rem' fill-opacity='0.5' />
-<ellipse cx="160" cy="180" rx="80" ry="120" stroke="black" fill="#00AA00" stroke-width='0.1rem' fill-opacity='0.5' />
-<ellipse cx="120" cy="150" rx="120" ry="80" stroke="black" fill="#0000AA" stroke-width='0.1rem' fill-opacity='0.5' />
-<ellipse cx="200" cy="150" rx="120" ry="80" stroke="black" fill="#888888" stroke-width='0.1rem' fill-opacity='0.5' />
+<ellipse cx="250" cy="200" rx="50" ry="50" stroke="black" fill="#AA0000" stroke-width='0.1rem' fill-opacity='0.5' />
+<use x='220' y='180' xlink:href='#iterator' />  
 
-<use x='120' y='100' xlink:href='#iterator' />  
+<rect x="100" y="185" width="50" height="30" stroke="black" fill="#000088" stroke-width='0.1rem' fill-opacity='0.5' />  
+<rect x="350" y="185" width="50" height="30" stroke="black" fill="#000088" stroke-width='0.1rem' fill-opacity='0.5' />  
+
+<use x='0' y='0' xlink:href='#BaseData' />  
+<line x1='250' y1='100' x2='250' y2='150' stoke='black' stoke-width='0.1rem' />
+
+<use x='0' y='300' xlink:href='#BombiData' />  
+<line x1='250' y1='250' x2='250' y2='300' stoke='black' stoke-width='0.1rem' />
+
 
 </svg>
 
