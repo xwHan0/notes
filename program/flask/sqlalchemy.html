@@ -8,7 +8,7 @@
 
 <h1>Tutorial</h1>
 <div class="code">
-<div class="codeTitle">appName/model.py - Package主文件</div>
+<div class="codeTitle">appName/model.py - 数据表定义文件</div>
 <div>
 
 <pre>
@@ -42,19 +42,33 @@ class User(db.Model):    # 必须为db.Model子类
 
 
 <div class="codeStep"># 4. 定义加载过程</div>
-@orm.reconstructor      # SQLAlchemy加载数据表时，执行的内容回调
-def init_and_load(self):
-    ......
+    @orm.reconstructor      # SQLAlchemy加载数据表时，执行的内容回调
+    def init_and_load(self):
+        ......
     
-<div class="codeStep"># 5. 查询</div>
-results = Table.query.filter(...)   \
-    .order_by(...)  \   # <a href='#order'>排序</a>
-    .all()  # <a href='#get'>获取数据</a>
+
 
 </pre>
    
+</div>  
 </div>
+
+<p>在合适的地方进行查询处理</p>
+
+<div class="code">
+    <div class="codeTitle">appName/route.py - 路由处理文件</div>
+    <div>
+        <pre>
+
+    <div class="codeStep"># 5. 查询</div>
+    results = Table.query.filter(...)   \
+        .order_by(...)  \   # <a href='#order'>排序</a>
+        .all()  # <a href='#get'>获取数据</a>
+
+        </pre>
+    </div>
 </div>
+
 
 <h1>Usage</h1>
 
