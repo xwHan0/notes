@@ -41,17 +41,10 @@ class User(db.Model):    # 必须为db.Model子类
         ForeignKey('class.id'))
 
 
-<div class="codeStep"># 4.Router Process
-# 路由基本处理组件：<a href='router'>router</a>, <a href='blueprint'>blueprint</a>
-# 路由处理过程可能涉及到HTTP组件：<a href='#request'>HTTP请求</a>、<a href='#response'>HTTP应答</a>、<a href='#session'>HTTP Session</a>、<a href='#redirect'>重定向</a>
-# 以及辅助处理: <a href='url_for'>url_for</a></div>
-@app.route('/login', method=["POST", "GET"])    #<a href="#router">路由处理</a>
-def index():
-    if request.method == 'POST':    #<a href="#request">请求判断</a>
-        request.form["username"]...
-        return ...
-    else
-        return "hello,world!"
+<div class="codeStep"># 4. 定义加载过程</div>
+@orm.reconstructor      # SQLAlchemy加载数据表时，执行的内容回调
+def init_and_load(self):
+    ......
     
 <div class="codeStep"># 5. 查询</div>
 results = Table.query.filter(...)   \
@@ -114,7 +107,7 @@ INNER JOIN {链接数据表名} ON {primaryjoin}
 <p>获取数据。支持以下方式：</p>
 <ul>
     <li>.all(): 返回所有匹配项的列表</li>
-    <li>.one(): 返回第一个匹配项</li>
+    <li>.first(): 返回第一个匹配项</li>
 </ul>
 
 </body>
