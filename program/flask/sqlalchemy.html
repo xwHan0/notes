@@ -53,9 +53,11 @@ def index():
     else
         return "hello,world!"
     
-<div class="codeStep"># 5.启动服务器，运行程序</div>
-if __name__ == '__main__':
-    app.run(debug=True, port=5001)    #<a href="run">运行实例</a>
+<div class="codeStep"># 5. 查询</div>
+results = Table.query.filter(...)   \
+    .order_by(...)  \   # <a href='#order'>排序</a>
+    .all()  # <a href='#get'>获取数据</a>
+
 </pre>
    
 </div>
@@ -99,6 +101,21 @@ INNER JOIN {链接数据表名} ON {primaryjoin}
   <li>'dynamic'</li>
   <li></li>
 </ul>
+
+<h2><a name='order'>Order</a></h2>
+<p>有3种写法：</p>
+<ul>
+    <li>.order_by(Table.field): 按照Table表的field域段进行升序排序</li>
+    <li>.order_by(sqlalchemy.asc(Table.field)): 上一种情况的具体写法</li>
+    <li>.order_by(sqlalchemy.desc(Table.field)): 按照Table表的field域段进行降序排序</li>
+</ul>
  
+<h2><a name='get'>Get</a></h2>
+<p>获取数据。支持以下方式：</p>
+<ul>
+    <li>.all(): 返回所有匹配项的列表</li>
+    <li>.one(): 返回第一个匹配项</li>
+</ul>
+
 </body>
 </html>
